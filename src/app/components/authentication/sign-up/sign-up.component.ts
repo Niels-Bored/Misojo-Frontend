@@ -25,6 +25,14 @@ export class SignUpComponent implements OnInit {
     this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
       this.showSpinner=value;
     })
+
+    // Disable aos wait if screen is small
+    if (window.innerHeight < 600) {
+      
+      document.querySelectorAll('[data-aos]')?.forEach((elem) => 
+        elem.setAttribute('data-aos-delay', '0')
+      )
+    }
    }
 
   signUpForm: FormGroup = new FormGroup(
