@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import Swal from 'sweetalert2'
+import { SpinnerService } from 'src/app/services/spinner.service';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,18 @@ import Swal from 'sweetalert2'
 export class LoginComponent implements OnInit {
 
   public submitted = false;
+  public showSpinner = false;
 
   constructor(
     private router: Router,
-    private misojoApi: MisojoApiService) { }
+    private misojoApi: MisojoApiService,
+    private spinnerService: SpinnerService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
+      this.showSpinner=value;
+    })
+  }
 
   loginForm: FormGroup = new FormGroup(
     {
@@ -35,9 +42,11 @@ export class LoginComponent implements OnInit {
 
     this.submitted = false;
 
+    this.spinnerService.show();
+
     this.misojoApi.login(this.loginForm.value)
       .pipe(finalize(() => {
-        //this.spinnerService.hide()
+        this.spinnerService.hide();
       }))
       .subscribe(
         () => {

@@ -4,6 +4,10 @@
   </div>
   <div class="right">
     <form [formGroup]="signUpForm" (ngSubmit)="submit()" novalidate>
+      <div class="spinner" *ngIf="showSpinner">
+        <app-spinner></app-spinner>
+      </div>
+      
       <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">Create Account</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">

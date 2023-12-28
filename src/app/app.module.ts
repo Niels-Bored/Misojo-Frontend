@@ -9,6 +9,7 @@ import { LabelComponent } from './components/controls/label/label.component';
 import { ButtonComponent } from './components/controls/button/button.component';
 import { InputComponent } from './components/controls/input/input.component';
 import { LoginComponent } from './components/authentication/login/login.component';
+import { SpinnerComponent } from './components/controls/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './components/authentication/login/login.componen
     LabelComponent,
     ButtonComponent,
     InputComponent,
-    LoginComponent
+    LoginComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
