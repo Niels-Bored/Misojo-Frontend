@@ -14,15 +14,16 @@
         <div class="split-row">
           <div class="row">
             <app-label
-              text="Name"
+              text="First Name"
             >
             </app-label>
             <app-input
               name="name"
               placeholder="John"
-              tabindex="'1'"
               type="text"
               formControlName="name"
+              [ariaLabelContent]="'First name input'"
+              [tabIndexNumber]="1"
               [control]="signUpForm.controls['name']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('name')!.hasError('required')"
@@ -38,9 +39,10 @@
             <app-input
               name="lastName"
               placeholder="Doe"
-              tabindex="'2'"
               type="text"
               formControlName="lastName"
+              [ariaLabelContent]="'Last name input'"
+              [tabIndexNumber]="2"
               [control]="signUpForm.controls['lastName']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('lastName')!.hasError('required')"
@@ -56,9 +58,10 @@
         <app-input
           name="email"
           placeholder="name@email.com"
-          tabindex="'3'"
           type="email"
           formControlName="email"
+          [ariaLabelContent]="'Email input'"
+          [tabIndexNumber]="3"
           [control]="signUpForm.controls['email']"
           [submitted]="submitted"
           [error]="this.signUpForm.get('email')!.hasError('required') || this.signUpForm.get('email')!.hasError('email')"
@@ -75,11 +78,12 @@
             <app-input
               name="password"
               placeholder="**********"
-              tabindex="'4'"
               type="password"
               formControlName="password"
+              [ariaLabelContent]="'Password input'"
               [control]="signUpForm.controls['password']"
               [submitted]="submitted"
+              [tabIndexNumber]="4"
               [error]="this.signUpForm.get('password')!.hasError('required') || this.signUpForm.get('password')!.value.length<8 || this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value"
             >
             </app-input>
@@ -98,6 +102,8 @@
               tabindex="'5'"
               type="password"
               formControlName="passwordConfirm"
+              [ariaLabelContent]="'Confirm your password input'"
+              [tabIndexNumber]="5"
               [control]="signUpForm.controls['passwordConfirm']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('passwordConfirm')!.value==''"
@@ -113,7 +119,8 @@
           <div class="button-comtainer">
             <app-button
               text="Sign Up"
-              tabIndex="'6'"
+              [ariaLabelContent]="'Sign up button'"
+              [tabIndexNumber]="6"
             >
             </app-button>
           </div>

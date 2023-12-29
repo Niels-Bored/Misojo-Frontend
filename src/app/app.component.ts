@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import * as AOS from 'aos';
 
 @Component({
@@ -8,6 +8,9 @@ import * as AOS from 'aos';
 })
 export class AppComponent {
   title = 'Misojo';
+  constructor(
+  ) {
+  }
   ngOnInit(): void {
     AOS.init();
   }

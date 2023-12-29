@@ -1,0 +1,15 @@
+{
+  "AUTH": {
+    "FIRST_NAME":"First Name",
+    "LAST_NAME":"Last Name",
+    "EMAIL":"Email",
+    "PASSWORD":"Password",
+    "CONFIRM_PASSWORD":"Confirm Password"
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "This field is required",
+    "INVALID_EMAIL": "Invalid email format",
+    "PASSWORD_DIFERENTS": "The passwords must be the same",
+    "INVALID_TEXT_LENGTH": "There has to be at least 8 characters"
+  }
+}

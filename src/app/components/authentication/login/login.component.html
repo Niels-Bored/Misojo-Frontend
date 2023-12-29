@@ -17,7 +17,8 @@
         <app-input
           name="email"
           placeholder="name@email.com"
-          tabindex="'1'"
+          [ariaLabelContent]="'Email input'"
+          [tabIndexNumber]="1"
           type="email"
           formControlName="email"
           [control]="loginForm.controls['email']"
@@ -34,9 +35,10 @@
         <app-input
           name="password"
           placeholder="**********"
-          tabindex="'2'"
+          [tabIndexNumber]="2"
           type="password"
           formControlName="password"
+          [ariaLabelContent]="'Password input'"
           [control]="loginForm.controls['password']"
           [submitted]="submitted"
           [error]="this.loginForm.get('password')!.hasError('required')"
@@ -50,7 +52,8 @@
           <div class="button-comtainer">
             <app-button
               text="Login"
-              tapIndex="'3'"
+              [ariaLabelContent]="'Login button'"
+              [tabIndexNumber]="3"
             >
             </app-button>
           </div>

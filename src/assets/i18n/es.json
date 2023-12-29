@@ -1,0 +1,15 @@
+{
+  "AUTH": {
+    "FIRST_NAME":"Nombre",
+    "LAST_NAME":"Apellido(s)",
+    "EMAIL":"Correo",
+    "PASSWORD":"Contraseña",
+    "CONFIRM_PASSWORD":"Confirmar Contraseña"
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "Campo obligatorio",
+    "INVALID_EMAIL": "Correo invalido",
+    "PASSWORD_DIFERENTS": "Las contraseñas deben ser iguales",
+    "INVALID_TEXT_LENGTH": "Tiene que haber al menos 8 caracteres en su contraseña"
+  }
+}

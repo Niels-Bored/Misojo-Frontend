@@ -3,6 +3,7 @@
   [name]="name"
   [type]="type"
   [placeholder]="placeholder"
+  [attr.aria-label]="ariaLabelContent"
   [tabindex]="tabIndexNumber"
   (input)="change($event)"
   [ngClass]="{'error-field':error && submitted}"
