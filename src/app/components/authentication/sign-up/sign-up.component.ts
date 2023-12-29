@@ -28,8 +28,7 @@ export class SignUpComponent implements OnInit {
 
     // Disable aos wait if screen is small
     if (window.innerHeight < 600) {
-      
-      document.querySelectorAll('[data-aos]')?.forEach((elem) => 
+      document.querySelectorAll('[data-aos]')?.forEach((elem) =>
         elem.setAttribute('data-aos-delay', '0')
       )
     }

@@ -2,8 +2,8 @@
   [value]="value"
   [name]="name"
   [type]="type"
-  placeholder="{{placeholder}}"
-  tabindex="{{tapIndex}}"
+  [placeholder]="placeholder"
+  [tabindex]="tabIndexNumber"
   (input)="change($event)"
   [ngClass]="{'error-field':error && submitted}"
 />

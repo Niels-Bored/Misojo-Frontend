@@ -21,12 +21,18 @@ export class InputComponent implements ControlValueAccessor {
   @Input("class") className = '';
   @Input() placeholder = '';
   @Input() name = '';
-  @Input() tapIndex = '';
+  @Input("tabindex") tabIndex = '';
   @Input() control: any;
   @Input() submitted: boolean = false;
   @Input() error: boolean = false;
   @Input() appearance: 'standard' | 'fill' = 'standard';
 
+  tabIndexNumber = 0;
+
+  ngOnInit(): void{
+    this.tabIndexNumber=Number(this.tabIndex.replace("'","").replace("'",""));
+  }
+  
   constructor() { }
 
   writeValue(val: any): void {

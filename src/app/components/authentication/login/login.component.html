@@ -17,7 +17,7 @@
         <app-input
           name="email"
           placeholder="name@email.com"
-          tabindex="3"
+          tabindex="'1'"
           type="email"
           formControlName="email"
           [control]="loginForm.controls['email']"
@@ -34,7 +34,7 @@
         <app-input
           name="password"
           placeholder="**********"
-          tabindex="4"
+          tabindex="'2'"
           type="password"
           formControlName="password"
           [control]="loginForm.controls['password']"
@@ -50,7 +50,7 @@
           <div class="button-comtainer">
             <app-button
               text="Login"
-              tapIndex="6"
+              tapIndex="'3'"
             >
             </app-button>
           </div>

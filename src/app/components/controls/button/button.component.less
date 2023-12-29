@@ -15,12 +15,17 @@ button{
   border: 3px solid @custom-primary;
   font-weight: bold;
 
+  &:focus{
+    outline: none;
+    opacity: 0.8;
+  }
+
   &:hover{
     background-color: @secondary-color;
     color: @custom-primary;
     transform: scale(1.05);
   }
-  
+
   &:active{
     opacity: 0.8;
   }

@@ -7,7 +7,7 @@
       <div class="spinner" *ngIf="showSpinner">
         <app-spinner></app-spinner>
       </div>
-      
+
       <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">Create Account</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
@@ -20,7 +20,7 @@
             <app-input
               name="name"
               placeholder="John"
-              tabindex="1"
+              tabindex="'1'"
               type="text"
               formControlName="name"
               [control]="signUpForm.controls['name']"
@@ -38,7 +38,7 @@
             <app-input
               name="lastName"
               placeholder="Doe"
-              tabindex="2"
+              tabindex="'2'"
               type="text"
               formControlName="lastName"
               [control]="signUpForm.controls['lastName']"
@@ -56,7 +56,7 @@
         <app-input
           name="email"
           placeholder="name@email.com"
-          tabindex="3"
+          tabindex="'3'"
           type="email"
           formControlName="email"
           [control]="signUpForm.controls['email']"
@@ -75,7 +75,7 @@
             <app-input
               name="password"
               placeholder="**********"
-              tabindex="4"
+              tabindex="'4'"
               type="password"
               formControlName="password"
               [control]="signUpForm.controls['password']"
@@ -95,7 +95,7 @@
             <app-input
               name="passwordConfirm"
               placeholder="**********"
-              tabindex="5"
+              tabindex="'5'"
               type="password"
               formControlName="passwordConfirm"
               [control]="signUpForm.controls['passwordConfirm']"
@@ -113,7 +113,7 @@
           <div class="button-comtainer">
             <app-button
               text="Sign Up"
-              tapIndex="6"
+              tabIndex="'6'"
             >
             </app-button>
           </div>

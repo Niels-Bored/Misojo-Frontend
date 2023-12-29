@@ -8,11 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   @Input() text = '';
-  @Input() tapIndex = '';
+  @Input() tabIndex = '';
+
+  tabIndexNumber = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.tabIndexNumber=Number(this.tabIndex.replace("'","").replace("'",""));
   }
 
 }
