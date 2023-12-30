@@ -7,7 +7,7 @@
       <div class="spinner" *ngIf="showSpinner">
         <app-spinner></app-spinner>
       </div>
-      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.LOGIN' | translate }}</h1>
+      <h1 tabindex="1" attr.aria-label="{{ 'AUTH.LOGIN' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.LOGIN' | translate }}</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <app-label
@@ -18,7 +18,7 @@
           name="email"
           placeholder="name@email.com"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
-          [tabIndexNumber]="1"
+          [tabIndexNumber]="2"
           type="email"
           formControlName="email"
           [control]="loginForm.controls['email']"
@@ -26,8 +26,8 @@
           [error]="this.loginForm.get('email')!.hasError('required') || this.loginForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">Required</p>
-        <p *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">Invalid Format</p>
+        <p *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <app-label
         text="{{ 'AUTH.PASSWORD' | translate }}"
         >
@@ -35,7 +35,7 @@
         <app-input
           name="password"
           placeholder="**********"
-          [tabIndexNumber]="2"
+          [tabIndexNumber]="3"
           type="password"
           formControlName="password"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
@@ -44,7 +44,7 @@
           [error]="this.loginForm.get('password')!.hasError('required')"
         >
         </app-input>
-        <p *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">Required</p>
+        <p *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
       </div>
 
       <div class="centered" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1600">
@@ -53,7 +53,7 @@
             <app-button
               text="{{ 'AUTH.LOGINBTN' | translate }}"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LOGINBTN' | translate"
-              [tabIndexNumber]="3"
+              [tabIndexNumber]="4"
             >
             </app-button>
           </div>

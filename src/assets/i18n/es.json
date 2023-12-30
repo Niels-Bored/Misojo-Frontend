@@ -1,7 +1,7 @@
 {
   "AUTH": {
     "CREATE": "Crear Cuenta",
-    "LOGIN": "Inica Sesión",
+    "LOGIN": "Inicia Sesión",
     "FIRST_NAME": "Nombre",
     "LAST_NAME": "Apellido(s)",
     "EMAIL": "Correo",
@@ -22,7 +22,11 @@
   "INPUT_ERRORS": {
     "REQUIRED": "Campo obligatorio",
     "INVALID_EMAIL": "Correo invalido",
-    "PASSWORD_DIFERENTS": "Las contraseñas deben ser iguales",
+    "DIFERENT_PASSWORD": "Las contraseñas deben ser iguales",
     "INVALID_TEXT_LENGTH": "Tiene que haber al menos 8 caracteres en su contraseña"
+  },
+  "ALERT_MESSAGES": {
+    "SUCCESS_TITLE": "Genial",
+    "SUCCESS_TEXT": "Inicio de sesión exitoso"
   }
 }

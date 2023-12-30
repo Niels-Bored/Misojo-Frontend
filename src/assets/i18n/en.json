@@ -22,7 +22,11 @@
   "INPUT_ERRORS": {
     "REQUIRED": "This field is required",
     "INVALID_EMAIL": "Invalid email format",
-    "PASSWORD_DIFERENTS": "The passwords must be the same",
+    "DIFERENT_PASSWORD": "The passwords must be the same",
     "INVALID_TEXT_LENGTH": "There has to be at least 8 characters"
+  },
+  "ALERT_MESSAGES": {
+    "SUCCESS_TITLE": "Great",
+    "SUCCESS_TEXT": "Succesful login"
   }
 }

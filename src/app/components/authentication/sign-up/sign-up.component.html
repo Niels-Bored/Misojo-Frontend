@@ -8,7 +8,7 @@
         <app-spinner></app-spinner>
       </div>
 
-      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.CREATE' | translate }}</h1>
+      <h1 tabindex="1" attr.aria-label="{{ 'AUTH.CREATE' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.CREATE' | translate }}</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <div class="split-row">
@@ -23,13 +23,13 @@
               type="text"
               formControlName="name"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.FIRSTNAMEINPUT' | translate"
-              [tabIndexNumber]="1"
+              [tabIndexNumber]="2"
               [control]="signUpForm.controls['name']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('name')!.hasError('required')"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">Required</p>
+            <p *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
           <div class="row">
             <app-label
@@ -42,13 +42,13 @@
               type="text"
               formControlName="lastName"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LASTNAMEINPUT' | translate"
-              [tabIndexNumber]="2"
+              [tabIndexNumber]="3"
               [control]="signUpForm.controls['lastName']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('lastName')!.hasError('required')"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">Required</p>
+            <p *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
         </div>
         <app-label
@@ -61,14 +61,14 @@
           type="email"
           formControlName="email"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
-          [tabIndexNumber]="3"
+          [tabIndexNumber]="4"
           [control]="signUpForm.controls['email']"
           [submitted]="submitted"
           [error]="this.signUpForm.get('email')!.hasError('required') || this.signUpForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">Required</p>
-        <p *ngIf="this.signUpForm.get('email')!.hasError('email') && submitted" class="error-field">Invalid Format</p>
+        <p *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p *ngIf="this.signUpForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <div class="split-row">
           <div class="row">
             <app-label
@@ -83,13 +83,13 @@
               [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
               [control]="signUpForm.controls['password']"
               [submitted]="submitted"
-              [tabIndexNumber]="4"
+              [tabIndexNumber]="5"
               [error]="this.signUpForm.get('password')!.hasError('required') || this.signUpForm.get('password')!.value.length<8 || this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">Required</p>
-            <p *ngIf="this.signUpForm.get('password')!.value.length<8 && submitted" class="error-field">There has to be at least 8 characters</p>
-            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value  && submitted" class="error-field">Passwords don't match</p>
+            <p *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p *ngIf="this.signUpForm.get('password')!.value.length<8 && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_TEXT_LENGTH' | translate}}</p>
+            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value  && submitted" class="error-field">{{'INPUT_ERRORS.DIFERENT_PASSWORD' | translate}}</p>
           </div>
           <div class="row">
             <app-label
@@ -103,13 +103,13 @@
               type="password"
               formControlName="passwordConfirm"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.CONFIRMPASSWORDINPUT' | translate"
-              [tabIndexNumber]="5"
+              [tabIndexNumber]="6"
               [control]="signUpForm.controls['passwordConfirm']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('passwordConfirm')!.value==''"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">Required</p>
+            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
             <app-button
             text="{{ 'AUTH.SIGNUPBTN' | translate }}"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.SIGNUPBTN' | translate"
-              [tabIndexNumber]="6"
+              [tabIndexNumber]="7"
             >
             </app-button>
           </div>

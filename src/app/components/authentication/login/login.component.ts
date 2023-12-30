@@ -16,11 +16,14 @@ export class LoginComponent implements OnInit {
 
   public submitted = false;
   public showSpinner = false;
+  public successTitle = ""
+  public successMessage = ""
 
   constructor(
     private router: Router,
     private misojoApi: MisojoApiService,
-    private spinnerService: SpinnerService) { }
+    private spinnerService: SpinnerService,
+    private translateService: TranslateService) { }
 
   ngOnInit(): void {
     this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
@@ -45,6 +48,14 @@ export class LoginComponent implements OnInit {
 
     this.spinnerService.show();
 
+    this.translateService.get('ALERT_MESSAGES.SUCCESS_TITLE').subscribe((res: string) => {
+      this.successTitle = res
+    });
+
+    this.translateService.get('ALERT_MESSAGES.SUCCESS_TEXT').subscribe((res: string) => {
+      this.successMessage = res
+    });
+
     this.misojoApi.login(this.loginForm.value)
       .pipe(finalize(() => {
         this.spinnerService.hide();
@@ -52,9 +63,9 @@ export class LoginComponent implements OnInit {
       .subscribe(
         () => {
           Swal.fire({
-            title: "Great",
+            title: this.successTitle,
             icon: "success",
-            text: "Succesful login",
+            text: this.successMessage,
             color: "#020202",
             background: "#fffbf5",
             confirmButtonColor: "#ffac6c",
