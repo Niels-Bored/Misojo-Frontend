@@ -10,6 +10,12 @@ import { ButtonComponent } from './components/controls/button/button.component';
 import { InputComponent } from './components/controls/input/input.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { SpinnerComponent } from './components/controls/spinner/spinner.component';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -26,7 +32,14 @@ import { SpinnerComponent } from './components/controls/spinner/spinner.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

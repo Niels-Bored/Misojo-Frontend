@@ -8,13 +8,13 @@
         <app-spinner></app-spinner>
       </div>
 
-      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">Create Account</h1>
+      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.CREATE' | translate }}</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <div class="split-row">
           <div class="row">
             <app-label
-              text="First Name"
+              text="{{ 'AUTH.FIRST_NAME' | translate }}"
             >
             </app-label>
             <app-input
@@ -22,7 +22,7 @@
               placeholder="John"
               type="text"
               formControlName="name"
-              [ariaLabelContent]="'First name input'"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.FIRSTNAMEINPUT' | translate"
               [tabIndexNumber]="1"
               [control]="signUpForm.controls['name']"
               [submitted]="submitted"
@@ -33,7 +33,7 @@
           </div>
           <div class="row">
             <app-label
-              text="Last Name"
+              text="{{ 'AUTH.LAST_NAME' | translate }}"
             >
             </app-label>
             <app-input
@@ -41,7 +41,7 @@
               placeholder="Doe"
               type="text"
               formControlName="lastName"
-              [ariaLabelContent]="'Last name input'"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.LASTNAMEINPUT' | translate"
               [tabIndexNumber]="2"
               [control]="signUpForm.controls['lastName']"
               [submitted]="submitted"
@@ -52,7 +52,7 @@
           </div>
         </div>
         <app-label
-          text="Email"
+          text="{{ 'AUTH.EMAIL' | translate }}"
         >
         </app-label>
         <app-input
@@ -60,7 +60,7 @@
           placeholder="name@email.com"
           type="email"
           formControlName="email"
-          [ariaLabelContent]="'Email input'"
+          [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
           [tabIndexNumber]="3"
           [control]="signUpForm.controls['email']"
           [submitted]="submitted"
@@ -72,7 +72,7 @@
         <div class="split-row">
           <div class="row">
             <app-label
-              text="Password"
+              text="{{ 'AUTH.PASSWORD' | translate }}"
             >
             </app-label>
             <app-input
@@ -80,7 +80,7 @@
               placeholder="**********"
               type="password"
               formControlName="password"
-              [ariaLabelContent]="'Password input'"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
               [control]="signUpForm.controls['password']"
               [submitted]="submitted"
               [tabIndexNumber]="4"
@@ -93,7 +93,7 @@
           </div>
           <div class="row">
             <app-label
-              text="Confirm Password"
+              text="{{ 'AUTH.CONFIRM_PASSWORD' | translate }}"
             >
             </app-label>
             <app-input
@@ -102,7 +102,7 @@
               tabindex="'5'"
               type="password"
               formControlName="passwordConfirm"
-              [ariaLabelContent]="'Confirm your password input'"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.CONFIRMPASSWORDINPUT' | translate"
               [tabIndexNumber]="5"
               [control]="signUpForm.controls['passwordConfirm']"
               [submitted]="submitted"
@@ -118,8 +118,8 @@
         <div class="row">
           <div class="button-comtainer">
             <app-button
-              text="Sign Up"
-              [ariaLabelContent]="'Sign up button'"
+            text="{{ 'AUTH.SIGNUPBTN' | translate }}"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.SIGNUPBTN' | translate"
               [tabIndexNumber]="6"
             >
             </app-button>

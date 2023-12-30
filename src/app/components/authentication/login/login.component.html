@@ -7,17 +7,17 @@
       <div class="spinner" *ngIf="showSpinner">
         <app-spinner></app-spinner>
       </div>
-      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">Login</h1>
+      <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.LOGIN' | translate }}</h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <app-label
-          text="Email"
+          text="{{ 'AUTH.EMAIL' | translate }}"
         >
         </app-label>
         <app-input
           name="email"
           placeholder="name@email.com"
-          [ariaLabelContent]="'Email input'"
+          [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
           [tabIndexNumber]="1"
           type="email"
           formControlName="email"
@@ -29,7 +29,7 @@
         <p *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">Required</p>
         <p *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">Invalid Format</p>
         <app-label
-          text="Password"
+        text="{{ 'AUTH.PASSWORD' | translate }}"
         >
         </app-label>
         <app-input
@@ -38,7 +38,7 @@
           [tabIndexNumber]="2"
           type="password"
           formControlName="password"
-          [ariaLabelContent]="'Password input'"
+          [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
           [control]="loginForm.controls['password']"
           [submitted]="submitted"
           [error]="this.loginForm.get('password')!.hasError('required')"
@@ -51,8 +51,8 @@
         <div class="row">
           <div class="button-comtainer">
             <app-button
-              text="Login"
-              [ariaLabelContent]="'Login button'"
+              text="{{ 'AUTH.LOGINBTN' | translate }}"
+              [ariaLabelContent]="'AUTH.ACCESIBILITY.LOGINBTN' | translate"
               [tabIndexNumber]="3"
             >
             </app-button>

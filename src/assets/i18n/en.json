@@ -1,10 +1,23 @@
 {
   "AUTH": {
-    "FIRST_NAME":"First Name",
-    "LAST_NAME":"Last Name",
-    "EMAIL":"Email",
-    "PASSWORD":"Password",
-    "CONFIRM_PASSWORD":"Confirm Password"
+    "CREATE": "Create User",
+    "LOGIN": "Login",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "SIGNUPBTN": "Sign up",
+    "LOGINBTN": "Login",
+    "ACCESIBILITY":{
+      "FIRSTNAMEINPUT": "First name input",
+      "LASTNAMEINPUT": "Last name input",
+      "EMAILINPUT": "Email input",
+      "PASSWORDINPUT": "Password input",
+      "CONFIRMPASSWORDINPUT": "Confirm Password input",
+      "LOGINBTN": "Login button",
+      "SIGNUPBTN": "Signup button"
+    }
   },
   "INPUT_ERRORS": {
     "REQUIRED": "This field is required",

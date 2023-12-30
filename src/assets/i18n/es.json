@@ -1,10 +1,23 @@
 {
   "AUTH": {
-    "FIRST_NAME":"Nombre",
-    "LAST_NAME":"Apellido(s)",
-    "EMAIL":"Correo",
-    "PASSWORD":"Contraseña",
-    "CONFIRM_PASSWORD":"Confirmar Contraseña"
+    "CREATE": "Crear Cuenta",
+    "LOGIN": "Inica Sesión",
+    "FIRST_NAME": "Nombre",
+    "LAST_NAME": "Apellido(s)",
+    "EMAIL": "Correo",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar Contraseña",
+    "SIGNUPBTN": "Crear cuenta",
+    "LOGINBTN": "Iniciar Sesión",
+    "ACCESIBILITY":{
+      "FIRSTNAMEINPUT":"Campo de texto nombre",
+      "LASTNAMEINPUT":"Campo de texto apellidos",
+      "EMAILINPUT": "Campo de texto correo",
+      "PASSWORDINPUT": "Campo de texto contraseña",
+      "CONFIRMPASSWORDINPUT": "Campo de texto confirmar contraseña",
+      "LOGINBTN": "Botón iniciar sesión",
+      "SIGNUPBTN": "Botón crear cuenta"
+    }
   },
   "INPUT_ERRORS": {
     "REQUIRED": "Campo obligatorio",

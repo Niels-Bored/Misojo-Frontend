@@ -5,6 +5,7 @@ import { finalize } from 'rxjs/operators';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import Swal from 'sweetalert2'
 import { SpinnerService } from 'src/app/services/spinner.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
