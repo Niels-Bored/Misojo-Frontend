@@ -26,6 +26,7 @@
     "INVALID_TEXT_LENGTH": "There has to be at least 8 characters"
   },
   "ALERT_MESSAGES": {
+    "CANCEL": "Cancelar",
     "SUCCESS_TITLE": "Great",
     "SUCCESS_SIGNUP_TEXT": "Successful sign up",
     "SUCCESS_LOGIN_TEXT": "Successful login"

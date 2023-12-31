@@ -1,5 +1,8 @@
 export interface IAuthenticationResponse {
   status:string,
   message:string,
-  data:[]
+  data:{
+    access:string,
+    refresh:string
+  }
 }

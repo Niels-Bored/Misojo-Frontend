@@ -66,6 +66,7 @@ export class LoginComponent implements OnInit {
             title: this.successTitle,
             icon: "success",
             text: this.successMessage,
+            html: "",
             color: "#020202",
             background: "#fffbf5",
             confirmButtonColor: "#ffac6c",
