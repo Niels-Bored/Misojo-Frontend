@@ -1,0 +1,39 @@
+{
+  "AUTH": {
+    "CREATE": "Create User",
+    "LOGIN": "Login",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "SIGNUPBTN": "Sign up",
+    "LOGINBTN": "Login",
+    "ACCESIBILITY":{
+      "FIRSTNAMEINPUT": "First name input",
+      "LASTNAMEINPUT": "Last name input",
+      "EMAILINPUT": "Email input",
+      "PASSWORDINPUT": "Password input",
+      "CONFIRMPASSWORDINPUT": "Confirm Password input",
+      "LOGINBTN": "Login button",
+      "SIGNUPBTN": "Signup button"
+    }
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "This field is required",
+    "INVALID_EMAIL": "Invalid email format",
+    "DIFERENT_PASSWORD": "The passwords must be the same",
+    "INVALID_TEXT_LENGTH": "There has to be at least 8 characters"
+  },
+  "ALERT_MESSAGES": {
+    "CANCEL": "Cancelar",
+    "SUCCESS_TITLE": "Great",
+    "SUCCESS_SIGNUP_TEXT": "Successful sign up",
+    "SUCCESS_LOGIN_TEXT": "Successful login"
+  },
+  "NAVBAR": {
+    "SKIP": "Skip to content",
+    "ES": "Spanish",
+    "EN": "English"
+  }
+}

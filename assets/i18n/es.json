@@ -1,0 +1,38 @@
+{
+  "AUTH": {
+    "CREATE": "Crear Cuenta",
+    "LOGIN": "Inicia Sesión",
+    "FIRST_NAME": "Nombre",
+    "LAST_NAME": "Apellido(s)",
+    "EMAIL": "Correo",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar Contraseña",
+    "SIGNUPBTN": "Crear cuenta",
+    "LOGINBTN": "Iniciar Sesión",
+    "ACCESIBILITY":{
+      "FIRSTNAMEINPUT":"Campo de texto nombre",
+      "LASTNAMEINPUT":"Campo de texto apellidos",
+      "EMAILINPUT": "Campo de texto correo",
+      "PASSWORDINPUT": "Campo de texto contraseña",
+      "CONFIRMPASSWORDINPUT": "Campo de texto confirmar contraseña",
+      "LOGINBTN": "Botón iniciar sesión",
+      "SIGNUPBTN": "Botón crear cuenta"
+    }
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "Campo obligatorio",
+    "INVALID_EMAIL": "Correo invalido",
+    "DIFERENT_PASSWORD": "Las contraseñas deben ser iguales",
+    "INVALID_TEXT_LENGTH": "Tiene que haber al menos 8 caracteres en su contraseña"
+  },
+  "ALERT_MESSAGES": {
+    "SUCCESS_TITLE": "Genial",
+    "SUCCESS_SIGNUP_TEXT": "Registro exitoso",
+    "SUCCESS_LOGIN_TEXT": "Inicio de sesión exitoso"
+  },
+  "NAVBAR": {
+    "SKIP": "Ir al contenido",
+    "ES": "Español",
+    "EN": "Inglés"
+  }
+}
