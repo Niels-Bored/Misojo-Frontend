@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
       this.successTitle = res
     });
 
-    this.translateService.get('ALERT_MESSAGES.SUCCESS_TEXT').subscribe((res: string) => {
+    this.translateService.get('ALERT_MESSAGES.SUCCESS_LOGIN_TEXT').subscribe((res: string) => {
       this.successMessage = res
     });
 

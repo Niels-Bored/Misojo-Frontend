@@ -27,6 +27,7 @@
   },
   "ALERT_MESSAGES": {
     "SUCCESS_TITLE": "Genial",
-    "SUCCESS_TEXT": "Inicio de sesión exitoso"
+    "SUCCESS_SIGNUP_TEXT": "Registro exitoso",
+    "SUCCESS_LOGIN_TEXT": "Inicio de sesión exitoso"
   }
 }

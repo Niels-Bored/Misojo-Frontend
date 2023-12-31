@@ -27,6 +27,7 @@
   },
   "ALERT_MESSAGES": {
     "SUCCESS_TITLE": "Great",
-    "SUCCESS_TEXT": "Succesful login"
+    "SUCCESS_SIGNUP_TEXT": "Successful sign up",
+    "SUCCESS_LOGIN_TEXT": "Successful login"
   }
 }
