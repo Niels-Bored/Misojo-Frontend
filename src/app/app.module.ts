@@ -12,6 +12,7 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { SpinnerComponent } from './components/controls/spinner/spinner.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { NavbarComponent } from './components/controls/navbar/navbar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,7 +26,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ButtonComponent,
     InputComponent,
     LoginComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

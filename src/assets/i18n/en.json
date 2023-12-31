@@ -30,5 +30,10 @@
     "SUCCESS_TITLE": "Great",
     "SUCCESS_SIGNUP_TEXT": "Successful sign up",
     "SUCCESS_LOGIN_TEXT": "Successful login"
+  },
+  "NAVBAR": {
+    "SKIP": "Skip to content",
+    "ES": "Spanish",
+    "EN": "English"
   }
 }

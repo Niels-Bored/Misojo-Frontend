@@ -29,5 +29,10 @@
     "SUCCESS_TITLE": "Genial",
     "SUCCESS_SIGNUP_TEXT": "Registro exitoso",
     "SUCCESS_LOGIN_TEXT": "Inicio de sesión exitoso"
+  },
+  "NAVBAR": {
+    "SKIP": "Ir al contenido",
+    "ES": "Español",
+    "EN": "Inglés"
   }
 }

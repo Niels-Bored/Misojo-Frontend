@@ -15,8 +15,11 @@ export class AppComponent {
   }
   ngOnInit(): void {
     AOS.init();
-    this.translateService.setDefaultLang('es');
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    this.translateService.use('es');
+    let language = localStorage.getItem("lang")
+    if(language){
+      this.translateService.setDefaultLang(language);
+    }else{
+      this.translateService.setDefaultLang('en');
+    }
   }
 }
