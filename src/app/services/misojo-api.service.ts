@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { HttpErrorResponse, HttpHeaders } from "@angular/common/http";
-import { environment } from 'src/environments/environment';
 import { Observable, of } from "rxjs";
 import { throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
@@ -14,7 +13,7 @@ import { IAuthenticationResponse } from '../models/authentication-response';
 })
 export class MisojoApiService {
 
-  private endpoint: string = environment.server + 'api';
+  apiUrl:string = "https://misojo-backend-b0545441e155.herokuapp.com/api"
 
   constructor(
     private httpClient: HttpClient
@@ -23,7 +22,7 @@ export class MisojoApiService {
   signUp(request: ISignUpRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
-        `${this.endpoint}/users/`,
+        `${this.apiUrl}/users/`,
         request
       )
       .pipe(
@@ -35,23 +34,8 @@ export class MisojoApiService {
   login(request: ILoginRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
-        `${this.endpoint}/token/`,
+        `${this.apiUrl}/token/`,
         request
-      )
-      .pipe(
-        tap((response) => {
-          localStorage.setItem("refresh",response.data.refresh);
-          localStorage.setItem("access",response.data.access);
-        }),
-        catchError((error) => this.handleError(error))
-      );
-  }
-
-  refreshToken(token: string): Observable<IAuthenticationResponse>{
-    return this.httpClient
-      .post<IAuthenticationResponse>(
-        `${this.endpoint}/token/`,
-        token
       )
       .pipe(
         tap((response) => {
