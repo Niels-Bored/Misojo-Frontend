@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  server: 'https://misojo-backend-b0545441e155.herokuapp.com/'
 };
 
 /*

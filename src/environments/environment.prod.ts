@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  server: 'https://misojo-backend-b0545441e155.herokuapp.com/'
 };

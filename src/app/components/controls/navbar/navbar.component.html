@@ -1,5 +1,5 @@
 <nav>
-  <p tabindex="1">{{ 'NAVBAR.SKIP' | translate }}</p>
+  <a href="main-content" tabindex="1" class="skip">{{ 'NAVBAR.SKIP' | translate }}</a>
   <select name="language" [(ngModel)]="selectedItem" (change)="changeLanguaje(item.value)" #item>
     <option value="en">{{ 'NAVBAR.EN' | translate }}</option>
     <option value="es">{{ 'NAVBAR.ES' | translate }}</option>
