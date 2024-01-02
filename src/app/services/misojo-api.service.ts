@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
+import { environment } from 'src/environments/environment';
 import { throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { ISignUpRequest } from '../models/sign-up-request.model';
 import { ILoginRequest } from '../models/login-request';
 import { IAuthenticationResponse } from '../models/authentication-response';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class MisojoApiService {
 
-  apiUrl:string = "https://misojo-backend-b0545441e155.herokuapp.com/api"
+  endpoint:string = environment.server
 
   constructor(
     private httpClient: HttpClient
@@ -22,7 +24,7 @@ export class MisojoApiService {
   signUp(request: ISignUpRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
-        `${this.apiUrl}/users/`,
+        `${this.endpoint}/users/`,
         request
       )
       .pipe(
@@ -34,7 +36,7 @@ export class MisojoApiService {
   login(request: ILoginRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
-        `${this.apiUrl}/token/`,
+        `${this.endpoint}/token/`,
         request
       )
       .pipe(
