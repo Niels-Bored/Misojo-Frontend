@@ -67,6 +67,32 @@ h1, p{
   margin-bottom: 20px;
 }
 
+.title{
+  text-decoration: none;
+  color: @text-color;
+}
+
+.title:focus{
+  outline: none;
+  border-bottom: 2px solid @custom-primary;
+}
+
+a{
+  text-decoration: none;
+  color: @custom-primary;
+  cursor: pointer;
+}
+
+a:focus{
+  outline: none;
+  border-bottom: 2px solid @custom-primary;
+}
+
+.redirect{
+  margin-top: 10px;
+  font-size: @text-sm;
+}
+
 .sweet-alert-title{
   border: 1px solid red;
   font-family: 'Heebo', sans-serif;

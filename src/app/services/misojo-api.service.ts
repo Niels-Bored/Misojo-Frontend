@@ -40,7 +40,7 @@ export class MisojoApiService {
       .pipe(
         tap((response) => {
           localStorage.setItem("refresh",response.data.refresh);
-          localStorage.setItem("access",response.data.refresh);
+          localStorage.setItem("access",response.data.access);
         }),
         catchError((error) => this.handleError(error))
       );

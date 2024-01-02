@@ -7,7 +7,7 @@
       <div class="spinner" *ngIf="showSpinner">
         <app-spinner></app-spinner>
       </div>
-      <h1 tabindex="1" attr.aria-label="{{ 'AUTH.LOGIN' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.LOGIN' | translate }}</h1>
+      <h1  attr.aria-label="{{ 'AUTH.LOGIN' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800"><a class="title" href="#">{{ 'AUTH.LOGIN' | translate }}</a></h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <app-label
@@ -18,7 +18,6 @@
           name="email"
           placeholder="name@email.com"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
-          [tabIndexNumber]="2"
           type="email"
           formControlName="email"
           [control]="loginForm.controls['email']"
@@ -35,7 +34,6 @@
         <app-input
           name="password"
           placeholder="**********"
-          [tabIndexNumber]="3"
           type="password"
           formControlName="password"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
@@ -53,10 +51,10 @@
             <app-button
               text="{{ 'AUTH.LOGINBTN' | translate }}"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LOGINBTN' | translate"
-              [tabIndexNumber]="4"
             >
             </app-button>
           </div>
+          <p class="redirect">{{'AUTH.REDIRECT_LOGIN' | translate }}<a routerLink="/signup" href="#">{{ 'AUTH.HERE' | translate }}</a></p>
         </div>
       </div>
     </form>

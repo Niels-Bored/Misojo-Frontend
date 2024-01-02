@@ -8,7 +8,7 @@
         <app-spinner></app-spinner>
       </div>
 
-      <h1 tabindex="1" attr.aria-label="{{ 'AUTH.CREATE' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'AUTH.CREATE' | translate }}</h1>
+      <h1 attr.aria-label="{{ 'AUTH.CREATE' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800"><a class="title" href="#">{{ 'AUTH.CREATE' | translate }}</a></h1>
 
       <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
         <div class="split-row">
@@ -23,7 +23,6 @@
               type="text"
               formControlName="name"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.FIRSTNAMEINPUT' | translate"
-              [tabIndexNumber]="2"
               [control]="signUpForm.controls['name']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('name')!.hasError('required')"
@@ -42,7 +41,6 @@
               type="text"
               formControlName="lastName"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LASTNAMEINPUT' | translate"
-              [tabIndexNumber]="3"
               [control]="signUpForm.controls['lastName']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('lastName')!.hasError('required')"
@@ -61,7 +59,6 @@
           type="email"
           formControlName="email"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
-          [tabIndexNumber]="4"
           [control]="signUpForm.controls['email']"
           [submitted]="submitted"
           [error]="this.signUpForm.get('email')!.hasError('required') || this.signUpForm.get('email')!.hasError('email')"
@@ -83,7 +80,6 @@
               [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
               [control]="signUpForm.controls['password']"
               [submitted]="submitted"
-              [tabIndexNumber]="5"
               [error]="this.signUpForm.get('password')!.hasError('required') || this.signUpForm.get('password')!.value.length<8 || this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value"
             >
             </app-input>
@@ -103,7 +99,6 @@
               type="password"
               formControlName="passwordConfirm"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.CONFIRMPASSWORDINPUT' | translate"
-              [tabIndexNumber]="6"
               [control]="signUpForm.controls['passwordConfirm']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('passwordConfirm')!.value==''"
@@ -120,10 +115,10 @@
             <app-button
             text="{{ 'AUTH.SIGNUPBTN' | translate }}"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.SIGNUPBTN' | translate"
-              [tabIndexNumber]="7"
             >
             </app-button>
           </div>
+          <p class="redirect">{{'AUTH.REDIRECT_SIGNUP' | translate }}<a routerLink="/login" href="#">{{ 'AUTH.HERE' | translate }}</a></p>
         </div>
       </div>
     </form>
