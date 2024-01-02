@@ -9,6 +9,9 @@
     "CONFIRM_PASSWORD": "Confirmar Contraseña",
     "SIGNUPBTN": "Crear cuenta",
     "LOGINBTN": "Iniciar Sesión",
+    "REDIRECT_LOGIN": "¿Ya tienes una cuenta? Haz clic ",
+    "REDIRECT_SIGNUP": "¿No tienes una cuenta? Haz clic ",
+    "HERE": "aquí",
     "ACCESIBILITY":{
       "FIRSTNAMEINPUT":"Campo de texto nombre",
       "LASTNAMEINPUT":"Campo de texto apellidos",

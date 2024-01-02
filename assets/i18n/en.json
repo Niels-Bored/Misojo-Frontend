@@ -9,6 +9,9 @@
     "CONFIRM_PASSWORD": "Confirm Password",
     "SIGNUPBTN": "Sign up",
     "LOGINBTN": "Login",
+    "REDIRECT_LOGIN": "Doesn't have an account? click ",
+    "REDIRECT_SIGNUP": "Already have an account? click ",
+    "HERE": "here",
     "ACCESIBILITY":{
       "FIRSTNAMEINPUT": "First name input",
       "LASTNAMEINPUT": "Last name input",
