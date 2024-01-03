@@ -115,7 +115,4 @@ export class SignUpComponent implements OnInit {
   handleError(error: any) {
     this.sweetAlert.alert("Error", error.message, "error")
   }
-
-
-
 }

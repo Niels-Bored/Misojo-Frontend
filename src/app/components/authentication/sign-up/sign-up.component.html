@@ -19,7 +19,7 @@
             </app-label>
             <app-input
               name="name"
-              placeholder="John"
+              [placeHolderText]="'AUTH.PLACEHOLDER_FIRST_NAME' | translate"
               type="text"
               formControlName="name"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.FIRSTNAMEINPUT' | translate"
@@ -37,7 +37,7 @@
             </app-label>
             <app-input
               name="lastName"
-              placeholder="Doe"
+              [placeHolderText]="'AUTH.PLACEHOLDER_LAST_NAME' | translate"
               type="text"
               formControlName="lastName"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LASTNAMEINPUT' | translate"
@@ -55,7 +55,7 @@
         </app-label>
         <app-input
           name="email"
-          placeholder="name@email.com"
+          [placeHolderText]="'AUTH.PLACEHOLDER_EMAIL' | translate"
           type="email"
           formControlName="email"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
@@ -74,7 +74,7 @@
             </app-label>
             <app-input
               name="password"
-              placeholder="**********"
+              [placeHolderText]="'AUTH.PLACEHOLDER_PASSWORD' | translate"
               type="password"
               formControlName="password"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
@@ -94,7 +94,7 @@
             </app-label>
             <app-input
               name="passwordConfirm"
-              placeholder="**********"
+              [placeHolderText]="'AUTH.PLACEHOLDER_CONFIRM_PASSWORD' | translate"
               tabindex="'5'"
               type="password"
               formControlName="passwordConfirm"

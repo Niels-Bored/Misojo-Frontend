@@ -16,7 +16,7 @@
         </app-label>
         <app-input
           name="email"
-          placeholder="name@email.com"
+          [placeHolderText]="'AUTH.PLACEHOLDER_EMAIL' | translate"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
           type="email"
           formControlName="email"
@@ -33,7 +33,7 @@
         </app-label>
         <app-input
           name="password"
-          placeholder="**********"
+          [placeHolderText]="'AUTH.PLACEHOLDER_PASSWORD' | translate"
           type="password"
           formControlName="password"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
