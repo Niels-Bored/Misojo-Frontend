@@ -65,6 +65,9 @@ export class SignUpComponent implements OnInit {
     return { invalid: true };
   }
 
+  /**
+  * Called when user submit the form
+  */
   submit() {
     if(this.signUpForm.invalid){
       this.translateService.get('ALERT_MESSAGES.CHECK_FIELDS').subscribe((res: string) => {
@@ -108,10 +111,19 @@ export class SignUpComponent implements OnInit {
 
   }
 
+  /**
+  * Redirects to login
+  */
   redirectToLogin(){
     this.router.navigate(["/login"]);
   }
 
+
+  /**
+  * Respond to any error on signup function.
+  * @constructor
+  * @param {any} error - The error returned from the server
+  */
   handleError(error: any) {
     this.sweetAlert.alert("Error", error.message, "error")
   }

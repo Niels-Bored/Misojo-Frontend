@@ -21,6 +21,12 @@ export class MisojoApiService {
     private httpClient: HttpClient
   ) { }
 
+  /**
+  * Calls server to create a new user.
+  * @constructor
+  * @param {ISignUpRequest} request - Request values on user endpoint
+  * @returns {Observable<IAuthenticationResponse>} Observable IAuthenticationResponse model
+  */
   signUp(request: ISignUpRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
@@ -33,6 +39,12 @@ export class MisojoApiService {
       );
   }
 
+  /**
+  * Calls server to validate user session.
+  * @constructor
+  * @param {ILoginRequest} request - Request values on token endpoint
+  * @returns {Observable<IAuthenticationResponse>} Observable IAuthenticationResponse model
+  */
   login(request: ILoginRequest): Observable<IAuthenticationResponse>{
     return this.httpClient
       .post<IAuthenticationResponse>(
@@ -48,6 +60,12 @@ export class MisojoApiService {
       );
   }
 
+  /**
+  * Throws an error on called endpoint.
+  * @constructor
+  * @param {HttpErrorResponse} response - Request values on token endpoint
+  * @returns {Observable<never>} Observable error
+  */
   handleError(response: HttpErrorResponse) {
     if (response.status === 0 || response.status === 401) {
       console.log(response.error)

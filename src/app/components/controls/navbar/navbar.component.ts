@@ -24,6 +24,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  /**
+  * Changes the global language configuration.
+  * @constructor
+  * @param {string} language - Language selected as a string
+  */
   changeLanguaje(language:string){
     localStorage.setItem("lang", language);
     this.selectedItem = language;

@@ -40,6 +40,9 @@ export class LoginComponent implements OnInit {
     }
   );
 
+  /**
+  * Called when user submit the form
+  */
   submit() {
     if(this.loginForm.invalid){
       this.translateService.get('ALERT_MESSAGES.CHECK_FIELDS').subscribe((res: string) => {
@@ -72,16 +75,24 @@ export class LoginComponent implements OnInit {
       .subscribe(
         () => {
           this.sweetAlert.alert(this.successTitle, this.successMessage, "success")
-          this.redirectToLogin()
+          this.redirectToHome()
         },
         (errorDefinition:any) => this.handleError(errorDefinition)
       );
   }
 
-  redirectToLogin(){
-    this.router.navigate(["/login"]);
+  /**
+  * Redirects to home
+  */
+  redirectToHome(){
+    this.router.navigate(["/home"]);
   }
 
+  /**
+  * Responds to any error on login function.
+  * @constructor
+  * @param {any} error - The error returned from the server
+  */
   handleError(error: any) {
     this.sweetAlert.alert("Error", error.message, "error")
   }

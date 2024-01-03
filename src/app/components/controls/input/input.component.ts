@@ -34,14 +34,23 @@ export class InputComponent implements ControlValueAccessor {
 
   constructor() { }
 
+  /**
+  * Assign written value on input
+  */
   writeValue(val: any): void {
     this.value = val;
   }
 
+  /**
+  * Register change event on component
+  */
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
 
+  /**
+  * Register touch event on component
+  */
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
   }
@@ -49,24 +58,13 @@ export class InputComponent implements ControlValueAccessor {
   public onChange(val: any): void {}
   public onTouched(): void {}
 
+  /**
+  * Detects change event on component
+  */
+
   change(event: any): void {
     this.value = event?.target?.value;
     this.onChange(this.value);
     this.onTouched();
-  }
-
-  get errorClass() {
-    return this.hasErrorInput()
-      ? `${this.appearance} is-invalid-input`
-      : this.appearance;
-  }
-
-  hasErrorInput():boolean {
-    return (
-      (this.submitted && this.control?.invalid) ||
-      (this.control &&
-        this.control.invalid &&
-        (this.control.dirty || this.control.touched))
-    );
   }
 }

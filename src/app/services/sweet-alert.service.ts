@@ -7,7 +7,13 @@ import Swal from 'sweetalert2';
 export class SweetAlertService {
 
   constructor() { }
-
+  /**
+  * Displays pre configured sweet alert.
+  * @constructor
+  * @param {string} title - Displayable title on sweetalert
+  * @param {string} text - Displayable text on sweetalert
+  * @param {string} icon - String to indicate sweetalert state
+  */
   alert(title:string, text: string, icon:string){
     Swal.fire({
       title: title,
