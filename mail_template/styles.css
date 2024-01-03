@@ -57,7 +57,7 @@ button{
   font-size: 1.25rem;
   color: white;
   padding: 5px 0;
-  cursor: pointer;
+  cursor: pointer !important;
   border: 3px solid #ffac6c;
   font-weight: bold;
 }
