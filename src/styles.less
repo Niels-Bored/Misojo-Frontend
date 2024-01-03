@@ -9,11 +9,15 @@ div:where(.swal2-container) div:where(.swal2-popup){
   font-family: @text-font !important;
 }
 
+.sweet-alert-text:focus{
+  outline: none;
+}
+
 h1, h2{
   font-family: @title-font !important;
 }
 
-p, label{
+a, p, label{
   font-family: @text-font !important;
 }
 
@@ -33,7 +37,7 @@ button.swal2-confirm {
     transform: scale(1.05);
     background-image: none !important;
   }
-  
+
   &:active{
     opacity: 0.8;
   }

@@ -4,12 +4,12 @@
   height: 100vh;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 
 .left{
   z-index: 1;
   width: 30%;
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -23,9 +23,10 @@ img{
 .right{
   min-height: 600px;
   width: 70%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   border-radius: 20px 0 0 20px;
   background-color: @secondary-color;
   /* box-sizing: border-box; */
@@ -203,5 +204,18 @@ form{
 {
   form{
     width: 100%;
+  }
+}
+
+// Vertical responsive
+@media (max-height: 600px)
+{
+  .content {
+    align-items: flex-start;
+
+    .left {
+      margin-top: 40px;
+    }
+
   }
 }

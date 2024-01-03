@@ -32,7 +32,8 @@
     "CANCEL": "Cancelar",
     "SUCCESS_TITLE": "Great",
     "SUCCESS_SIGNUP_TEXT": "Successful sign up",
-    "SUCCESS_LOGIN_TEXT": "Successful login"
+    "SUCCESS_LOGIN_TEXT": "Successful login",
+    "CHECK_FIELDS": "There are invalid fields, please check them"
   },
   "NAVBAR": {
     "SKIP": "Skip to content",

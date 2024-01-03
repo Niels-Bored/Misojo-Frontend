@@ -3,9 +3,9 @@ import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors }
 import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
-import Swal from 'sweetalert2'
 import { SpinnerService } from 'src/app/services/spinner.service';
 import {TranslateService} from '@ngx-translate/core';
+import { SweetAlertService } from '../../../services/sweet-alert.service';
 
 @Component({
   selector: 'app-login',
@@ -18,12 +18,14 @@ export class LoginComponent implements OnInit {
   public showSpinner = false;
   public successTitle = ""
   public successMessage = ""
+  public invalidMessage = ""
 
   constructor(
     private router: Router,
     private misojoApi: MisojoApiService,
     private spinnerService: SpinnerService,
-    private translateService: TranslateService) { }
+    private translateService: TranslateService,
+    private sweetAlert: SweetAlertService) { }
 
   ngOnInit(): void {
     this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
@@ -40,6 +42,11 @@ export class LoginComponent implements OnInit {
 
   submit() {
     if(this.loginForm.invalid){
+      this.translateService.get('ALERT_MESSAGES.CHECK_FIELDS').subscribe((res: string) => {
+        this.invalidMessage = res
+      });
+
+      this.sweetAlert.alert("Error", this.invalidMessage, "error")
       this.submitted = true;
       return;
     }
@@ -47,6 +54,8 @@ export class LoginComponent implements OnInit {
     this.submitted = false;
 
     this.spinnerService.show();
+
+
 
     this.translateService.get('ALERT_MESSAGES.SUCCESS_TITLE').subscribe((res: string) => {
       this.successTitle = res
@@ -62,23 +71,7 @@ export class LoginComponent implements OnInit {
       }))
       .subscribe(
         () => {
-          Swal.fire({
-            title: this.successTitle,
-            icon: "success",
-            text: this.successMessage,
-            html: "<p tabindex=1 aria-label='"+this.successMessage+"'>"+this.successMessage+"</p",
-            color: "#020202",
-            background: "#fffbf5",
-            confirmButtonColor: "#ffac6c",
-            showCloseButton: true,
-            showCancelButton: false,
-            focusConfirm: false,
-            confirmButtonText: "Ok",
-            confirmButtonAriaLabel: "Ok",
-            cancelButtonText: "Cancel",
-            cancelButtonAriaLabel: "Cancel",
-            iconColor: "#ffac6cc2"
-          });
+          this.sweetAlert.alert(this.successTitle, this.successMessage, "success")
           this.redirectToLogin()
         },
         (errorDefinition:any) => this.handleError(errorDefinition)
@@ -90,24 +83,6 @@ export class LoginComponent implements OnInit {
   }
 
   handleError(error: any) {
-    Swal.fire({
-      title: "Error",
-      icon: "error",
-      text: error.message,
-      html: "<p tabindex=1 aria-label='"+error.message+"'>"+error.message+"</p",
-      color: "#020202",
-      background: "#fffbf5",
-      confirmButtonColor: "#ffac6c",
-      showCloseButton: true,
-      showCancelButton: false,
-      focusConfirm: false,
-      confirmButtonText: "Ok",
-      confirmButtonAriaLabel: "Ok",
-      cancelButtonText: "Cancel",
-      cancelButtonAriaLabel: "Cancel",
-      iconColor: "#ffac6cc2"
-    });
+    this.sweetAlert.alert("Error", error.message, "error")
   }
-
-
 }

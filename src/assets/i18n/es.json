@@ -31,7 +31,8 @@
   "ALERT_MESSAGES": {
     "SUCCESS_TITLE": "Genial",
     "SUCCESS_SIGNUP_TEXT": "Registro exitoso",
-    "SUCCESS_LOGIN_TEXT": "Inicio de sesión exitoso"
+    "SUCCESS_LOGIN_TEXT": "Inicio de sesión exitoso",
+    "CHECK_FIELDS": "Hay campos invalidos, por favor revisalos"
   },
   "NAVBAR": {
     "SKIP": "Ir al contenido",
