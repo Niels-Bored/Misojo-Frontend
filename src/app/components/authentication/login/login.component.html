@@ -16,33 +16,35 @@
         </app-label>
         <app-input
           name="email"
-          [placeHolderText]="'AUTH.PLACEHOLDER_EMAIL' | translate"
-          [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
           type="email"
           formControlName="email"
+          [placeHolderText]="'AUTH.PLACEHOLDER_EMAIL' | translate"
+          [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
+          [ariaLabelledBy]="'required-message-email format-message-email'"
           [control]="loginForm.controls['email']"
           [submitted]="submitted"
           [error]="this.loginForm.get('email')!.hasError('required') || this.loginForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
-        <p *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
+        <p id="required-message-email" *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="format-message-email" *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <app-label
         text="{{ 'AUTH.PASSWORD' | translate }}"
         >
         </app-label>
         <app-input
           name="password"
-          [placeHolderText]="'AUTH.PLACEHOLDER_PASSWORD' | translate"
           type="password"
           formControlName="password"
+          [placeHolderText]="'AUTH.PLACEHOLDER_PASSWORD' | translate"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
+          [ariaLabelledBy]="'required-message-password format-message-password different-message-password'"
           [control]="loginForm.controls['password']"
           [submitted]="submitted"
           [error]="this.loginForm.get('password')!.hasError('required')"
         >
         </app-input>
-        <p *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="required-message-password" *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
       </div>
 
       <div class="centered" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1600">

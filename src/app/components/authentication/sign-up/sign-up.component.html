@@ -23,12 +23,13 @@
               type="text"
               formControlName="name"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.FIRSTNAMEINPUT' | translate"
+              [ariaLabelledBy]="'required-message-firstname'"
               [control]="signUpForm.controls['name']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('name')!.hasError('required')"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-firstname" *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
           <div class="row">
             <app-label
@@ -41,12 +42,13 @@
               type="text"
               formControlName="lastName"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.LASTNAMEINPUT' | translate"
+              [ariaLabelledBy]="'required-message-lastname'"
               [control]="signUpForm.controls['lastName']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('lastName')!.hasError('required')"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-lastname" *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
         </div>
         <app-label
@@ -59,13 +61,14 @@
           type="email"
           formControlName="email"
           [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
+          [ariaLabelledBy]="'required-message-email format-message-email'"
           [control]="signUpForm.controls['email']"
           [submitted]="submitted"
           [error]="this.signUpForm.get('email')!.hasError('required') || this.signUpForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
-        <p *ngIf="this.signUpForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
+        <p id="required-message-email" *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="format-message-email" *ngIf="this.signUpForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <div class="split-row">
           <div class="row">
             <app-label
@@ -78,14 +81,15 @@
               type="password"
               formControlName="password"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.PASSWORDINPUT' | translate"
+              [ariaLabelledBy]="'required-message-password format-message-password different-message-password'"
               [control]="signUpForm.controls['password']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('password')!.hasError('required') || this.signUpForm.get('password')!.value.length<8 || this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
-            <p *ngIf="this.signUpForm.get('password')!.value.length<8 && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_TEXT_LENGTH' | translate}}</p>
-            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value  && submitted" class="error-field">{{'INPUT_ERRORS.DIFERENT_PASSWORD' | translate}}</p>
+            <p id="required-message-password" *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="format-message-password" *ngIf="this.signUpForm.get('password')!.value.length<8 && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_TEXT_LENGTH' | translate}}</p>
+            <p id="different-message-password" *ngIf="this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value  && submitted" class="error-field">{{'INPUT_ERRORS.DIFERENT_PASSWORD' | translate}}</p>
           </div>
           <div class="row">
             <app-label
@@ -99,12 +103,13 @@
               type="password"
               formControlName="passwordConfirm"
               [ariaLabelContent]="'AUTH.ACCESIBILITY.CONFIRMPASSWORDINPUT' | translate"
+              [ariaLabelledBy]="'required-message-confirm-password'"
               [control]="signUpForm.controls['passwordConfirm']"
               [submitted]="submitted"
               [error]="this.signUpForm.get('passwordConfirm')!.value==''"
             >
             </app-input>
-            <p *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-confirm-password" *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
           </div>
         </div>
       </div>
