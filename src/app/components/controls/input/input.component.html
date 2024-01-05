@@ -4,6 +4,7 @@
   [type]="type"
   [placeholder]="placeHolderText"
   [attr.aria-label]="ariaLabelContent"
+  [attr.aria-labelledby]="ariaLabelledBy"
   [tabindex]="tabIndexNumber"
   (input)="change($event)"
   [ngClass]="{'error-field':error && submitted}"

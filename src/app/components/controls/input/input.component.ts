@@ -23,6 +23,7 @@ export class InputComponent implements ControlValueAccessor {
   @Input() name = '';
   @Input() placeHolderText = '';
   @Input() ariaLabelContent = '';
+  @Input() ariaLabelledBy = '';
   @Input() tabIndexNumber = 0;
   @Input() control: any;
   @Input() submitted: boolean = false;

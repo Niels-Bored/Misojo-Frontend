@@ -42,6 +42,7 @@
   },
   "NAVBAR": {
     "SKIP": "Skip to content",
+    "CONTENT": "Press tab to move to main content",
     "ES": "Spanish",
     "EN": "English"
   }

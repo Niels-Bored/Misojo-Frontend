@@ -1,7 +1,8 @@
 <nav>
-  <a class="skip-content" tabindex="1">{{ 'NAVBAR.SKIP' | translate }}</a>
+  <a class="skip-content" tabindex="1" (click)="redirecToMainContent()" (keyup.enter)="redirecToMainContent()">{{ 'NAVBAR.SKIP' | translate }}</a>
   <select name="language" [(ngModel)]="selectedItem" (change)="changeLanguaje(item.value)" #item>
     <option value="en">{{ 'NAVBAR.EN' | translate }}</option>
     <option value="es">{{ 'NAVBAR.ES' | translate }}</option>
   </select>
+  <div #myElement [tabIndex]="variable" attr.aria-label="{{ 'NAVBAR.CONTENT' | translate }}"></div>
 </nav>

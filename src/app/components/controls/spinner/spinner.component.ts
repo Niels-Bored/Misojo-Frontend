@@ -16,7 +16,7 @@ export class SpinnerComponent implements OnInit {
       this.showSpinner = this.spinnerService
         .getShowSpinnerObservable();
   }
-  
+
   ngOnInit(): void {
   }
 

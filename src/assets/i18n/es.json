@@ -41,6 +41,7 @@
   },
   "NAVBAR": {
     "SKIP": "Ir al contenido",
+    "CONTENT": "Presiona tab para ir al contenido principal",
     "ES": "Español",
     "EN": "Inglés"
   }
