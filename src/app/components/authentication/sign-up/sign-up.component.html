@@ -29,7 +29,7 @@
               [error]="this.signUpForm.get('name')!.hasError('required')"
             >
             </app-input>
-            <p id="required-message-firstname" *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-firstname" *ngIf="this.signUpForm.get('name')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_FIRSTNAME' | translate}}</p>
           </div>
           <div class="row">
             <app-label
@@ -48,7 +48,7 @@
               [error]="this.signUpForm.get('lastName')!.hasError('required')"
             >
             </app-input>
-            <p id="required-message-lastname" *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-lastname" *ngIf="this.signUpForm.get('lastName')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_LASTNAME' | translate}}</p>
           </div>
         </div>
         <app-label
@@ -67,7 +67,7 @@
           [error]="this.signUpForm.get('email')!.hasError('required') || this.signUpForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p id="required-message-email" *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="required-message-email" *ngIf="this.signUpForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_EMAIL' | translate}}</p>
         <p id="format-message-email" *ngIf="this.signUpForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <div class="split-row">
           <div class="row">
@@ -87,7 +87,7 @@
               [error]="this.signUpForm.get('password')!.hasError('required') || this.signUpForm.get('password')!.value.length<8 || this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value"
             >
             </app-input>
-            <p id="required-message-password" *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-password" *ngIf="this.signUpForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_PASSWORD' | translate}}</p>
             <p id="format-message-password" *ngIf="this.signUpForm.get('password')!.value.length<8 && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_TEXT_LENGTH' | translate}}</p>
             <p id="different-message-password" *ngIf="this.signUpForm.get('passwordConfirm')!.value != this.signUpForm.get('password')!.value  && submitted" class="error-field">{{'INPUT_ERRORS.DIFERENT_PASSWORD' | translate}}</p>
           </div>
@@ -109,7 +109,7 @@
               [error]="this.signUpForm.get('passwordConfirm')!.value==''"
             >
             </app-input>
-            <p id="required-message-confirm-password" *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+            <p id="required-message-confirm-password" *ngIf="this.signUpForm.get('passwordConfirm')!.value=='' && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_CONFIRM_PASSWORD' | translate}}</p>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@
           [error]="this.loginForm.get('email')!.hasError('required') || this.loginForm.get('email')!.hasError('email')"
         >
         </app-input>
-        <p id="required-message-email" *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="required-message-email" *ngIf="this.loginForm.get('email')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_EMAIL' | translate}}</p>
         <p id="format-message-email" *ngIf="this.loginForm.get('email')!.hasError('email') && submitted" class="error-field">{{'INPUT_ERRORS.INVALID_EMAIL' | translate}}</p>
         <app-label
         text="{{ 'AUTH.PASSWORD' | translate }}"
@@ -44,7 +44,7 @@
           [error]="this.loginForm.get('password')!.hasError('required')"
         >
         </app-input>
-        <p id="required-message-password" *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED' | translate}}</p>
+        <p id="required-message-password" *ngIf="this.loginForm.get('password')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_PASSWORD' | translate}}</p>
       </div>
 
       <div class="centered" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1600">

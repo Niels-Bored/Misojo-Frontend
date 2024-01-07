@@ -28,6 +28,11 @@
     }
   },
   "INPUT_ERRORS": {
+    "REQUIRED_FIRSTNAME": "Campo obligatorio nombre",
+    "REQUIRED_LASTNAME": "Campo obligatorio apellido",
+    "REQUIRED_EMAIL": "Campo obligatorio correo",
+    "REQUIRED_PASSWORD": "Campo obligatorio contraseña",
+    "REQUIRED_CONFIRM_PASSWORD": "Campo obligatorio confirmar contraseña",
     "REQUIRED": "Campo obligatorio",
     "INVALID_EMAIL": "Correo invalido",
     "DIFERENT_PASSWORD": "Las contraseñas deben ser iguales",
