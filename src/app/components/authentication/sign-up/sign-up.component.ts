@@ -6,6 +6,7 @@ import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import { SpinnerService } from 'src/app/services/spinner.service';
 import {TranslateService} from '@ngx-translate/core';
 import { SweetAlertService } from '../../../services/sweet-alert.service';
+import { TranslateMessagesService } from '../../../services/translate-messages.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -25,6 +26,7 @@ export class SignUpComponent implements OnInit {
     private misojoApi: MisojoApiService,
     private spinnerService: SpinnerService,
     private translateService: TranslateService,
+    private translateMessage: TranslateMessagesService,
     private sweetAlert: SweetAlertService) { }
 
   ngOnInit(): void {
@@ -70,10 +72,7 @@ export class SignUpComponent implements OnInit {
   */
   submit() {
     if(this.signUpForm.invalid){
-      this.translateService.get('ALERT_MESSAGES.CHECK_FIELDS').subscribe((res: string) => {
-        this.invalidMessage = res
-      });
-
+      this.invalidMessage = this.translateMessage.getMessage("ALERT_MESSAGES.CHECK_FIELDS")
       this.sweetAlert.alert("Error", this.invalidMessage, "error")
       this.submitted = true;
       return;
@@ -83,13 +82,8 @@ export class SignUpComponent implements OnInit {
 
     this.spinnerService.show();
 
-    this.translateService.get('ALERT_MESSAGES.SUCCESS_TITLE').subscribe((res: string) => {
-      this.successTitle = res
-    });
-
-    this.translateService.get('ALERT_MESSAGES.SUCCESS_SIGNUP_TEXT').subscribe((res: string) => {
-      this.successMessage = res
-    });
+    this.successTitle = this.translateMessage.getMessage("ALERT_MESSAGES.SUCCESS_TITLE")
+    this.successMessage = this.translateMessage.getMessage("ALERT_MESSAGES.SUCCESS_LOGIN_TEXT")
 
     this.misojoApi.signUp({
       first_name: this.signUpForm.get('name')!.value,
