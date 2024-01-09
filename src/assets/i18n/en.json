@@ -30,9 +30,9 @@
   "INPUT_ERRORS": {
     "REQUIRED_FIRSTNAME": "Field first name is required",
     "REQUIRED_LASTNAME": "Field lastname is required",
-    "REQUIRED_EMAIL": "Field email is required",
-    "REQUIRED_PASSWORD": "Field password is required",
-    "REQUIRED_CONFIRM_PASSWORD": "Field confirm password is required",
+    "REQUIRED_EMAIL": "Email can't be empty",
+    "REQUIRED_PASSWORD": "Password can't be empty",
+    "REQUIRED_CONFIRM_PASSWORD": "Repeat your password",
     "REQUIRED": "This field is required",
     "INVALID_EMAIL": "Invalid email format",
     "DIFERENT_PASSWORD": "The passwords must be the same",

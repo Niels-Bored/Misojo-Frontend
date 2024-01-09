@@ -28,15 +28,15 @@
     }
   },
   "INPUT_ERRORS": {
-    "REQUIRED_FIRSTNAME": "Campo obligatorio nombre",
-    "REQUIRED_LASTNAME": "Campo obligatorio apellido",
-    "REQUIRED_EMAIL": "Campo obligatorio correo",
-    "REQUIRED_PASSWORD": "Campo obligatorio contraseña",
-    "REQUIRED_CONFIRM_PASSWORD": "Campo obligatorio confirmar contraseña",
+    "REQUIRED_FIRSTNAME": "Nombre es obligatorio",
+    "REQUIRED_LASTNAME": "Apellido es obligatorio",
+    "REQUIRED_EMAIL": "El correo no puede estar vacío",
+    "REQUIRED_PASSWORD": "La contraseña no puede estar vacía",
+    "REQUIRED_CONFIRM_PASSWORD": "Escribe de nuevo tu contraseña",
     "REQUIRED": "Campo obligatorio",
     "INVALID_EMAIL": "Correo invalido",
     "DIFERENT_PASSWORD": "Las contraseñas deben ser iguales",
-    "INVALID_TEXT_LENGTH": "Tiene que haber al menos 8 caracteres en su contraseña"
+    "INVALID_TEXT_LENGTH": "La contraseña iene que tener al menos 8 caracteres"
   },
   "ALERT_MESSAGES": {
     "SUCCESS_TITLE": "Genial",
