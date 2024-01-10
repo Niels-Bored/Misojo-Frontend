@@ -1,100 +1,47 @@
 @import "../../../../common-variables.less";
 
-.dropdown {
-  /* position: relative; */
-  width: 150px;
+button{
+  width: 80px;
+  max-width: 85%;
 
-  filter: url(#goo);
-
-  &__face,
-  &__items {
-    background-color: @custom-primary;
-    padding: 5px;
-    border-radius: 15px;
-    box-sizing: border-box;
-  }
-
-  &__face {
-    display: block;
-    position: relative;
-    &:hover{
-      cursor: pointer;
-    }
-  }
-
-  &__items {
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 100%;
-    list-style: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    visibility: hidden;
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
-
-    &::before {
-      content: "";
-      background-color: @custom-primary;
-      position: absolute;
-      bottom: 100%;
-      right: 20%;
-      height: 40px;
-      width: 20px;
-    }
-  }
-
-  &__arrow {
-    border-bottom: 2px solid @secondary-color;
-    border-right: 2px solid @secondary-color;
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg) translateY(-50%);
-    transform-origin: right;
-  }
-
-  input {
-    display: none;
-
-    &:checked ~ .dropdown__items {
-      top: calc(100% + 25px);
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}
-
-.dropdown__text{
-  color: @secondary-color;
-  margin-left: 20px;
-}
-
-li{
-  display: flex;
-  align-items: center;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: @custom-primary;
+  transition: all @transition-duration ease-out;
+  font-size: @text-sm;
+  color: white;
+  padding: 5px 0;
   cursor: pointer;
+  border: 3px solid @custom-primary;
+  font-weight: bold;
+
+  &:focus{
+    outline: none;
+    transform: scale(1.05);
+  }
+
+  &:hover{
+    transform: scale(1.05);
+  }
+
+  &:active{
+    opacity: 0.8;
+  }
+}
+
+.left-button{
+  border-radius: 7px 0px  0px 7px;
+  margin-right: -2px;
+}
+
+.right-button{
+  border-radius: 0px 7px 7px 0px;
 }
 
 img{
   width: 20px;
-  height: 10px;
-  margin-left: 5px;
 }
 
-p{
-  width: auto;
-  margin: 0;
-  color: @secondary-color;
+.selected{
+  background-color: @secondary-color;
+  color: @custom-primary;
 }
-
-svg{
-  display: none;
-}
-

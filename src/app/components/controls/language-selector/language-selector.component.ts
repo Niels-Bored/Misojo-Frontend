@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-language-selector',
@@ -7,12 +7,26 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class LanguageSelectorComponent implements OnInit {
   @Output() seleccion = new EventEmitter<string>();
-  optionSelected = "En";
-  imageSelected = "../../../../assets/Images/usa.png";
+  @Input() text = '';
+  @Input() ariaLabelContent = '';
+  @Input() tabIndexNumber = 0;
+
+  english:boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
+    let language = localStorage.getItem("lang")
+    if(language){
+      if(language=="en"){
+        this.english=true;
+      }else{
+        this.english=false;
+      }
+    }else{
+      this.english=true;
+    }
+
   }
 
   /**
@@ -20,10 +34,12 @@ export class LanguageSelectorComponent implements OnInit {
   * @constructor
   * @param {string} language - Language selected as a string
   */
-  selectLangauge(language:string, image:string){
-    this.optionSelected=language;
-    this.imageSelected=image;
-    this.seleccion.emit(this.optionSelected);
+  selectLangauge(language:string){
+    this.seleccion.emit(language);
+    if(language=="en"){
+      this.english=true;
+    }else{
+      this.english=false;
+    }
   }
-
 }
