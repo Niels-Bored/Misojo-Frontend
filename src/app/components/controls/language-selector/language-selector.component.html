@@ -1,0 +1,22 @@
+<div class="dropdown">
+  <input type="checkbox" id="dropdown">
+
+  <label class="dropdown__face" for="dropdown">
+    <div class="dropdown__text">{{optionSelected}} <img [src]="imageSelected" alt=""></div>
+
+    <div class="dropdown__arrow"></div>
+  </label>
+
+  <ul class="dropdown__items">
+    <li (click)="selectLangauge('EN', '../../../../assets/Images/usa.png')"><p>EN</p> <img src="../../../../assets/Images/usa.png" alt=""></li>
+    <li (click)="selectLangauge('ES', '../../../../assets/Images/spain.png')"><p>ES</p> <img src="../../../../assets/Images/spain.png" alt=""></li>
+  </ul>
+</div>
+
+<svg>
+  <filter id="goo">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+    <feBlend in="SourceGraphic" in2="goo" />
+  </filter>
+</svg>

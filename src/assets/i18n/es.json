@@ -49,5 +49,17 @@
     "CONTENT": "Presiona tab para ir al contenido principal",
     "ES": "Español",
     "EN": "Inglés"
+  },
+  "API": {
+    "REGISTER":{
+      "CREATED": "Usuario creado exitosamente",
+      "DUPLICATED": "Ya existe un usuario con ese correo",
+      "INVALID_PASSWORD":"Contraseña debe ser mayor a 8 caracteres"
+    },
+    "TOKEN":{
+      "GENERATED": "Bienvenido",
+      "INVALID_CRED": "Correo o contraseña incorrecto",
+      "INACTIVE": "Cuenta inactiva: Necesitas activar tu cuenta desde tu correo"
+    }
   }
 }

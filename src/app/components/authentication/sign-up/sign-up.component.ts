@@ -119,6 +119,7 @@ export class SignUpComponent implements OnInit {
   * @param {any} error - The error returned from the server
   */
   handleError(error: any) {
-    this.sweetAlert.alert("Error", error.message, "error")
+    let errorMessage = this.translateMessage.getMessage(error.message)
+    this.sweetAlert.alert("Error", errorMessage, "error")
   }
 }

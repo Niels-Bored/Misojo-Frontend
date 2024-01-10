@@ -13,6 +13,7 @@ import { SpinnerComponent } from './components/controls/spinner/spinner.componen
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NavbarComponent } from './components/controls/navbar/navbar.component';
+import { LanguageSelectorComponent } from './components/controls/language-selector/language-selector.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     InputComponent,
     LoginComponent,
     SpinnerComponent,
-    NavbarComponent
+    NavbarComponent,
+    LanguageSelectorComponent
   ],
   imports: [
     BrowserModule,
