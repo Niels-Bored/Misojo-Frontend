@@ -7,6 +7,7 @@ import { SpinnerService } from 'src/app/services/spinner.service';
 import {TranslateService} from '@ngx-translate/core';
 import { SweetAlertService } from '../../../services/sweet-alert.service';
 import { TranslateMessagesService } from '../../../services/translate-messages.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,27 +21,7 @@ export class SignUpComponent implements OnInit {
   public successTitle = "";
   public successMessage = "";
   public invalidMessage = "";
-
-  constructor(
-    private router: Router,
-    private misojoApi: MisojoApiService,
-    private spinnerService: SpinnerService,
-    private translateService: TranslateService,
-    private translateMessage: TranslateMessagesService,
-    private sweetAlert: SweetAlertService) { }
-
-  ngOnInit(): void {
-    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
-      this.showSpinner=value;
-    })
-
-    // Disable aos wait if screen is small
-    if (window.innerHeight < 600) {
-      document.querySelectorAll('[data-aos]')?.forEach((elem) =>
-        elem.setAttribute('data-aos-delay', '0')
-      )
-    }
-   }
+  public language = ""
 
   signUpForm: FormGroup = new FormGroup(
     {
@@ -53,6 +34,39 @@ export class SignUpComponent implements OnInit {
     this.passwordMatchValidator
   );
 
+  constructor(
+    private router: Router,
+    private misojoApi: MisojoApiService,
+    private spinnerService: SpinnerService,
+    private translateService: TranslateService,
+    private translateMessage: TranslateMessagesService,
+    private sweetAlert: SweetAlertService,
+    private titleService: Title) { }
+
+  ngOnInit(): void {
+    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
+      this.showSpinner=value;
+    })
+
+    this.translateMessage.setTitle("SIGNUP");
+
+    let subscription = this.translateMessage.language$.subscribe((language) => {
+      this.language = language;
+      this.translateMessage.setTitle("SIGNUP");
+
+    });
+
+    // Disable aos wait if screen is small
+    if (window.innerHeight < 600) {
+      document.querySelectorAll('[data-aos]')?.forEach((elem) =>
+        elem.setAttribute('data-aos-delay', '0')
+      )
+    }
+  }
+
+  /**
+  * Generates an error in case that both passwords weren't the same
+  */
   private passwordMatchValidator(
     formGroup: AbstractControl
   ): ValidationErrors | null {

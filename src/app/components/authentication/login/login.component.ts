@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import { SpinnerService } from 'src/app/services/spinner.service';
 import {TranslateService} from '@ngx-translate/core';
@@ -20,20 +21,7 @@ export class LoginComponent implements OnInit {
   public successTitle = ""
   public successMessage = ""
   public invalidMessage = ""
-
-  constructor(
-    private router: Router,
-    private misojoApi: MisojoApiService,
-    private spinnerService: SpinnerService,
-    private translateService: TranslateService,
-    private translateMessage: TranslateMessagesService,
-    private sweetAlert: SweetAlertService) { }
-
-  ngOnInit(): void {
-    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
-      this.showSpinner=value;
-    })
-  }
+  public language = ""
 
   loginForm: FormGroup = new FormGroup(
     {
@@ -41,6 +29,30 @@ export class LoginComponent implements OnInit {
       password: new FormControl('', [Validators.required])
     }
   );
+
+  constructor(
+    private router: Router,
+    private misojoApi: MisojoApiService,
+    private spinnerService: SpinnerService,
+    private translateService: TranslateService,
+    private translateMessage: TranslateMessagesService,
+    private sweetAlert: SweetAlertService
+    ) { }
+
+
+
+  ngOnInit(): void {
+    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
+      this.showSpinner=value;
+    })
+
+    this.translateMessage.setTitle("LOGIN");
+
+    let subscription = this.translateMessage.language$.subscribe((language) => {
+      this.language = language;
+      this.translateMessage.setTitle("LOGIN");
+    });
+  }
 
   /**
   * Called when user submit the form

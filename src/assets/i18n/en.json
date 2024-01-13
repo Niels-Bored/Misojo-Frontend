@@ -51,6 +51,10 @@
     "ES": "Spanish",
     "EN": "English"
   },
+  "TITLE": {
+    "SIGNUP":"Sign Up",
+    "LOGIN":"Login"
+  },
   "API":{
     "REGISTER":{
       "CREATED": "User created succesfully",

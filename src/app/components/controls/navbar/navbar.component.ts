@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import { TranslateMessagesService } from '../../../services/translate-messages.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,6 +17,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private translateService: TranslateService,
+    private translateMessage:TranslateMessagesService,
     private router: Router,
     private renderer: Renderer2
   ) {
@@ -47,6 +49,8 @@ export class NavbarComponent implements OnInit {
     this.selectedItem = language.toLowerCase();
     //Set global language configuration
     this.translateService.use(language.toLowerCase());
+    //Send changed language to other components
+    this.translateMessage.changeLanguage(language.toLowerCase());
   }
 
   /**

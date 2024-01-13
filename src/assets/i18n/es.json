@@ -50,6 +50,10 @@
     "ES": "Español",
     "EN": "Inglés"
   },
+  "TITLE": {
+    "SIGNUP":"Registro",
+    "LOGIN":"Inicio de Sesión"
+  },
   "API": {
     "REGISTER":{
       "CREATED": "Usuario creado exitosamente",
