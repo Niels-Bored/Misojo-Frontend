@@ -47,8 +47,8 @@
   "NAVBAR": {
     "SKIP": "Ir al contenido",
     "CONTENT": "Presiona tab para ir al contenido principal",
-    "ES": "Español",
-    "EN": "Inglés"
+    "ES": "Seleccionar idioma español",
+    "EN": "Seleccionar idioma inglés"
   },
   "TITLE": {
     "SIGNUP":"Registro",

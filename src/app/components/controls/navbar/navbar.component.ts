@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit {
   selectedItem:string = ""
   variable:string = ""
 
+  classNavbar:string = ""
+
   constructor(
     private translateService: TranslateService,
     private translateMessage:TranslateMessagesService,
@@ -35,6 +37,13 @@ export class NavbarComponent implements OnInit {
 
   ngAfterViewInit() {
 
+  }
+
+  /**
+  * Changes class on navbar menu
+  */
+  changeClass(){
+    this.classNavbar=""
   }
 
   /**
