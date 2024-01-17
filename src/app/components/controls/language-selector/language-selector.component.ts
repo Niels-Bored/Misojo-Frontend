@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-language-selector',
@@ -13,18 +14,22 @@ export class LanguageSelectorComponent implements OnInit {
 
   english:boolean = false
 
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformID: any
+  ) { }
 
   ngOnInit(): void {
-    let language = localStorage.getItem("lang")
-    if(language){
-      if(language=="en"){
-        this.english=true;
+    if(isPlatformBrowser(this.platformID)){
+      let language = localStorage.getItem("lang")
+      if(language){
+        if(language=="en"){
+          this.english=true;
+        }else{
+          this.english=false;
+        }
       }else{
-        this.english=false;
+        this.english=true;
       }
-    }else{
-      this.english=true;
     }
 
   }

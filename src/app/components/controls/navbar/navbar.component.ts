@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
 import { TranslateMessagesService } from '../../../services/translate-messages.service';
 import { Router } from '@angular/router';
@@ -21,17 +22,20 @@ export class NavbarComponent implements OnInit {
     private translateService: TranslateService,
     private translateMessage:TranslateMessagesService,
     private router: Router,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformID: any
   ) {
   }
 
   ngOnInit(): void {
-    //Set deafult languge on localstorage value
-    let language = localStorage.getItem("lang")
-    if(language){
-      this.selectedItem=language
-    }else{
-      this.selectedItem="en"
+    if(isPlatformBrowser(this.platformID)){
+      //Set deafult languge on localstorage value
+      let language = localStorage.getItem("lang")
+      if(language){
+        this.selectedItem=language
+      }else{
+        this.selectedItem="en"
+      }
     }
   }
 
@@ -52,14 +56,16 @@ export class NavbarComponent implements OnInit {
   * @param {string} language - Language selected as a string
   */
   changeLanguage(language:string){
-    //Save on localstorage language configuration
-    localStorage.setItem("lang", language.toLowerCase());
-    //Set language option on select
-    this.selectedItem = language.toLowerCase();
-    //Set global language configuration
-    this.translateService.use(language.toLowerCase());
-    //Send changed language to other components
-    this.translateMessage.changeLanguage(language.toLowerCase());
+    if(isPlatformBrowser(this.platformID)){
+      //Save on localstorage language configuration
+      localStorage.setItem("lang", language.toLowerCase());
+      //Set language option on select
+      this.selectedItem = language.toLowerCase();
+      //Set global language configuration
+      this.translateService.use(language.toLowerCase());
+      //Send changed language to other components
+      this.translateMessage.changeLanguage(language.toLowerCase());
+    }
   }
 
   /**

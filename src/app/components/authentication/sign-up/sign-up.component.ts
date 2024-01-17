@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
@@ -41,7 +42,9 @@ export class SignUpComponent implements OnInit {
     private translateService: TranslateService,
     private translateMessage: TranslateMessagesService,
     private sweetAlert: SweetAlertService,
-    private titleService: Title) { }
+    private titleService: Title,
+    @Inject(PLATFORM_ID) private platformID: any
+    ) { }
 
   ngOnInit(): void {
     this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
@@ -56,11 +59,13 @@ export class SignUpComponent implements OnInit {
 
     });
 
-    // Disable aos wait if screen is small
-    if (window.innerHeight < 600) {
-      document.querySelectorAll('[data-aos]')?.forEach((elem) =>
-        elem.setAttribute('data-aos-delay', '0')
-      )
+    if(isPlatformBrowser(this.platformID)){
+      // Disable aos wait if screen is small
+      if (window.innerHeight < 600) {
+        document.querySelectorAll('[data-aos]')?.forEach((elem) =>
+          elem.setAttribute('data-aos-delay', '0')
+        )
+      }
     }
   }
 

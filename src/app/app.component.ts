@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
 import * as AOS from 'aos';
 
@@ -10,16 +11,20 @@ import * as AOS from 'aos';
 export class AppComponent {
   title = 'Misojo';
   constructor(
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    @Inject(PLATFORM_ID) private platformID: any
   ) {
   }
   ngOnInit(): void {
-    AOS.init();
-    let language = localStorage.getItem("lang")
-    if(language){
-      this.translateService.setDefaultLang(language);
-    }else{
-      this.translateService.setDefaultLang('en');
+    if(isPlatformBrowser(this.platformID)){
+      AOS.init();
+      let language = localStorage.getItem("lang")
+      if(language){
+        this.translateService.setDefaultLang(language);
+      }else{
+        this.translateService.setDefaultLang('en');
+      }
     }
+
   }
 }

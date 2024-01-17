@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './components/authentication/sign-up/sign-up.component';
@@ -45,7 +45,10 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withFetch()),
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

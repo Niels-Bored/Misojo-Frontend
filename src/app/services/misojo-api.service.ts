@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
 import { HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
@@ -18,7 +20,8 @@ export class MisojoApiService {
   endpoint:string = environment.server
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    @Inject(PLATFORM_ID) private platformID: any
   ) { }
 
   /**
@@ -53,8 +56,10 @@ export class MisojoApiService {
       )
       .pipe(
         tap((response) => {
-          localStorage.setItem("refresh",response.data.refresh);
-          localStorage.setItem("access",response.data.access);
+          if(isPlatformBrowser(this.platformID)){
+            localStorage.setItem("refresh",response.data.refresh);
+            localStorage.setItem("access",response.data.access);
+          }
         }),
         catchError((error) => this.handleError(error))
       );
