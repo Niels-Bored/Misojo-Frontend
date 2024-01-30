@@ -47,7 +47,11 @@ export class NavbarComponent implements OnInit {
   * Changes class on navbar menu
   */
   changeClass(){
-    this.classNavbar=""
+    if(this.classNavbar == "active"){
+      this.classNavbar = ""
+    }else{
+      this.classNavbar="active"
+    }
   }
 
   /**
