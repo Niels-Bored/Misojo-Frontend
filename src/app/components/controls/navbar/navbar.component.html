@@ -11,8 +11,10 @@
     </div>
 
     <div class="right">
-      <a routerLink="/login">Login</a>
-      <a routerLink="/signup">Sign Up</a>
+      <ul>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/signup">Sign Up</a></li>
+      </ul>
       <div class="selector">
         <app-language-selector (seleccion)="changeLanguage($event)"></app-language-selector>
       </div>
