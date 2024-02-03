@@ -27,6 +27,12 @@
       "SIGNUPBTN": "Botón crear cuenta"
     }
   },
+  "HOME":{
+    "MENU":{
+      "MY_FILES":"Mis archivos",
+      "PUBLIC_FILES":"Archivos Públicos"
+    }
+  },
   "INPUT_ERRORS": {
     "REQUIRED_FIRSTNAME": "Nombre es obligatorio",
     "REQUIRED_LASTNAME": "Apellido es obligatorio",

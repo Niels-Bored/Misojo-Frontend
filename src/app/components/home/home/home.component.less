@@ -1,0 +1,64 @@
+@import "../../../../common-variables.less";
+
+.main-section{
+  height: 80vh;
+  padding: 10px 20px 20px 20px;
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.menu{
+  width: 30%;
+}
+
+.page{
+  width: 70%;
+}
+
+.menu, .page{
+  border-radius: 20px;
+  background-color: @secondary-color;
+}
+
+.audio-player {
+  width: 70vw;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #282828;
+  box-sizing: border-box;
+}
+
+audio {
+  width: 100%;
+  max-width: 1000px;
+  outline: none;
+}
+
+audio::-webkit-media-controls-enclosure {
+  background-color: @secondary-color;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  font-size: @text-sm;
+  color: @custom-primary;
+}
+
+/* audio::-webkit-media-controls-timeline{
+  background-color: @custom-primary;
+}
+
+.audio-player audio::-webkit-media-controls-timeline::-webkit-media-slider-thumb {
+  background-color: #1db954;
+}
+
+audio::-webkit-media-controls-play-button{
+  color: red;
+} */

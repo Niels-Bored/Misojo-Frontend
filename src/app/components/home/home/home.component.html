@@ -1,0 +1,16 @@
+
+<section class="main-section">
+  <aside class="menu">
+    <div>{{ 'HOME.MENU.MY_FILES' | translate }}</div>
+    <div>{{ 'HOME.MENU.PUBLIC_FILES' | translate }}</div>
+  </aside>
+  <aside class="page">
+    <router-outlet></router-outlet>
+  </aside>
+</section>
+<div class="audio-player">
+  <audio controls>
+      <source src="/assets/audio.mp3" type="audio/mp3">
+      Tu navegador no soporta la etiqueta audio.
+  </audio>
+</div>

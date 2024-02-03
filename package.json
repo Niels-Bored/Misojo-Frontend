@@ -28,6 +28,7 @@
     "@ngx-translate/core": "14.0",
     "@ngx-translate/http-loader": "7.0",
     "@types/aos": "^3.0.7",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "aos": "^2.3.4",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",

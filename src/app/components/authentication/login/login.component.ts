@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
   * Redirects to home
   */
   redirectToHome(){
-    this.router.navigate(["/home"]);
+    this.router.navigate(["/home/mylibrary"]);
   }
 
   /**

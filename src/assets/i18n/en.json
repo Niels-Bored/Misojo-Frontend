@@ -27,6 +27,12 @@
       "SIGNUPBTN": "Signup button"
     }
   },
+  "HOME":{
+    "MENU":{
+      "MY_FILES":"My Files",
+      "PUBLIC_FILES":"Public Files"
+    }
+  },
   "INPUT_ERRORS": {
     "REQUIRED_FIRSTNAME": "Field first name is required",
     "REQUIRED_LASTNAME": "Field lastname is required",

@@ -10,10 +10,11 @@ import { ButtonComponent } from './components/controls/button/button.component';
 import { InputComponent } from './components/controls/input/input.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { SpinnerComponent } from './components/controls/spinner/spinner.component';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NavbarComponent } from './components/controls/navbar/navbar.component';
 import { LanguageSelectorComponent } from './components/controls/language-selector/language-selector.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -23,10 +24,11 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     SignUpComponent,
+    LoginComponent,
+    HomeComponent,
     LabelComponent,
     ButtonComponent,
     InputComponent,
-    LoginComponent,
     SpinnerComponent,
     NavbarComponent,
     LanguageSelectorComponent
