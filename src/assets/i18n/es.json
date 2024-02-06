@@ -53,6 +53,8 @@
   "NAVBAR": {
     "SKIP": "Ir al contenido",
     "CONTENT": "Presiona tab para ir al contenido principal",
+    "SIGNUP":"Registro",
+    "LOGIN":"Inicio de Sesión",
     "ES": "Seleccionar idioma español",
     "EN": "Seleccionar idioma inglés"
   },

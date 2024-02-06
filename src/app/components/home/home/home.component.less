@@ -1,7 +1,8 @@
 @import "../../../../common-variables.less";
 
 .main-section{
-  height: 80vh;
+  margin-top: 70px;
+  height: 70vh;
   padding: 10px 20px 20px 20px;
   display: flex;
   gap: 20px;
@@ -9,16 +10,41 @@
 }
 
 .menu{
-  width: 30%;
+  width: 20%;
+  padding: 20px;
+  background-color: @secondary-color;
+  box-sizing: border-box;
+  .menu-option{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    svg{
+      width: 15px;
+    }
+    a{
+      text-decoration: none;
+      color: @text-color;
+    }
+  }
+
+  .active-route{
+    font-weight: bold;
+    a{
+      color: @custom-primary;
+    }
+    svg{
+      fill: @custom-primary;
+    }
+  }
 }
 
 .page{
-  width: 70%;
+  width: 80%;
 }
 
 .menu, .page{
   border-radius: 20px;
-  background-color: @secondary-color;
+  /* background-color: @secondary-color; */
 }
 
 .audio-player {

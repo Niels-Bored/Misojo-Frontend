@@ -4,6 +4,7 @@ import { SignUpComponent } from './components/authentication/sign-up/sign-up.com
 import { LoginComponent } from './components/authentication/login/login.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { MyLibraryComponent } from './components/home/my-library/my-library.component';
+import { PublicLibraryComponent } from './components/home/public-library/public-library.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'mylibrary',
         component: MyLibraryComponent
+      },
+      {
+        path: 'publiclibrary',
+        component: PublicLibraryComponent
       },
       {
         path: '',
