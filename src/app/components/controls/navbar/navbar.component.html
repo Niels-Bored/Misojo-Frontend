@@ -14,8 +14,8 @@
 
     <div class="right">
       <ul [ngClass]="classNavbar">
-        <li><a routerLink="/login">Login</a></li>
-        <li><a routerLink="/signup">Sign Up</a></li>
+        <li><a routerLink="/login">{{ 'NAVBAR.LOGIN' | translate }}</a></li>
+        <li><a routerLink="/signup">{{ 'NAVBAR.SIGNUP' | translate }}</a></li>
       </ul>
       <div class="selector">
         <app-language-selector (seleccion)="changeLanguage($event)"></app-language-selector>
