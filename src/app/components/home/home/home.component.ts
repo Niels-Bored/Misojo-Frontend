@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
 
+  userName: string = "John Smith";
+  userEmail: string = "jnsmith99@gmail.com";
   currentRoute: string = "";
 
   constructor(

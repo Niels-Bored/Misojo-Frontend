@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Swal from 'sweetalert2';
+import Swal, { SweetAlertIcon } from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class SweetAlertService {
   * @param {string} text - Displayable text on sweetalert
   * @param {string} icon - String to indicate sweetalert state
   */
-  alert(title:string, text: string, icon:string){
+  alert(title:string, text: string, icon:SweetAlertIcon){
     Swal.fire({
       title: title,
-      icon: "error",
+      icon: icon,
       text: text,
       html: "<p class='sweet-alert-text' tabindex=1 aria-label='"+text+"'>"+text+"</p",
       color: "#020202",

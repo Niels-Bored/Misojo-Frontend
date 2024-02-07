@@ -30,7 +30,13 @@
   "HOME":{
     "MENU":{
       "MY_FILES":"My Files",
-      "PUBLIC_FILES":"Public Files"
+      "PUBLIC_FILES":"Public Files",
+      "RECOMENDATIONS":"Recomendation",
+      "UPLOAD":"Upload file",
+      "REPORT":"Report an error",
+      "FOLLOW":"Follow us",
+      "SETTINGS":"Settings",
+      "LOGOUT":"Log out"
     }
   },
   "INPUT_ERRORS": {

@@ -1,9 +1,8 @@
 @import "../../../../common-variables.less";
 
 .main-section{
-  margin-top: 70px;
-  height: 70vh;
-  padding: 10px 20px 20px 20px;
+  height: 100vh;
+  padding: 0 20px 0 0;
   display: flex;
   gap: 20px;
   box-sizing: border-box;
@@ -11,9 +10,59 @@
 
 .menu{
   width: 20%;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: @secondary-color;
+  overflow: hidden;
   box-sizing: border-box;
+
+  .upper-section{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    .misojo-icon{
+      width: 35px;
+      fill: @custom-primary;
+    }
+    .file-options{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  .bottom-section{
+    display: flex;
+    flex-direction: column;
+    
+    .user-options{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-sizing: border-box;
+    }
+    .user-information{
+      padding: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: @tertiary-color;
+      box-sizing: border-box;
+      img{
+        width: 35px;
+        border-radius: 35px;
+      }
+      .user-name{
+        font-weight: bold;
+      }
+      .email-text{
+        font-size: @text-xs;
+      }
+    }
+  }
+
   .menu-option{
     display: flex;
     align-items: center;
@@ -40,10 +89,15 @@
 
 .page{
   width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.menu, .page{
-  border-radius: 20px;
+.menu{
+  border-radius: 0 20px 20px 0;
   /* background-color: @secondary-color; */
 }
 
