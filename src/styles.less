@@ -2,7 +2,7 @@
 
 body{
   margin: 0;
-  background-color: @custom-primary;
+  background-color: @primary-color;
 }
 
 div:where(.swal2-container) div:where(.swal2-popup){
@@ -28,16 +28,16 @@ p{
 // Overwrite sweet alert styles
 button.swal2-confirm {
   border-radius: 7px;
-  background-color: @custom-primary;
+  background-color: @primary-color;
   transition: all @transition-duration ease-out;
   color: white !important;
   cursor: pointer;
-  border: 3px solid @custom-primary !important;
+  border: 3px solid @primary-color !important;
   font-weight: bold;
 
   &:hover{
     background-color: white !important;
-    color: @custom-primary !important;
+    color: @primary-color !important;
     transform: scale(1.05);
     background-image: none !important;
   }

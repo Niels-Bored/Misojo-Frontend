@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
 
-  userName: string = "John Smith";
-  userEmail: string = "jnsmith99@gmail.com";
+  userName: string = "John Smith Zapata Bernal";
+  userEmail: string = "jnsmith990000000000@gmail.com";
   currentRoute: string = "";
 
   constructor(
@@ -28,5 +28,16 @@ export class HomeComponent implements OnInit{
   activateOption(route:string){
     this.currentRoute = this.router.url;
     return route==this.currentRoute
+  }
+
+  cutStringValue(value:string, type:string){
+    let stringLenght = 0
+    if(type == "name"){
+      stringLenght = 13;
+    }
+    if(type == "email"){
+      stringLenght = 16;
+    }
+    return value.substring(0, stringLenght)+"...";
   }
 }
