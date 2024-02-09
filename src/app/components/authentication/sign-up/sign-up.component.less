@@ -79,13 +79,18 @@ h1, p{
 
 a{
   text-decoration: none;
-  color: @primary-color;
+  color: @tertiary-color;
   cursor: pointer;
+  font-weight: bold;
 }
 
 a:focus{
   outline: none;
   border-bottom: 2px solid @primary-color;
+}
+
+a:hover {
+  color: fade(@tertiary-color, 80%);
 }
 
 .redirect{
@@ -183,7 +188,7 @@ form{
     width: 320px;
     max-width: 80%;
     margin-right: 0;
-    margin-top: -110px;
+    margin-top: -80px;
   }
 
   .centered {
