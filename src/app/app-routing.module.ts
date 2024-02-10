@@ -5,6 +5,11 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { HomeComponent } from './components/home/home/home.component';
 import { MyLibraryComponent } from './components/home/my-library/my-library.component';
 import { PublicLibraryComponent } from './components/home/public-library/public-library.component';
+import { RecomendationsComponent } from './components/home/recomendations/recomendations.component';
+import { UploadFileComponent } from './components/home/upload-file/upload-file.component';
+import { ReportErrorComponent } from './components/home/report-error/report-error.component';
+import { FollowUsComponent } from './components/home/follow-us/follow-us.component';
+import { SettingsComponent } from './components/home/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -30,8 +35,28 @@ const routes: Routes = [
         component: MyLibraryComponent
       },
       {
-        path: 'publiclibrary',
+        path: 'public',
         component: PublicLibraryComponent
+      },
+      {
+        path: 'recomendations',
+        component: RecomendationsComponent
+      },
+      {
+        path: 'upload',
+        component: UploadFileComponent
+      },
+      {
+        path: 'report',
+        component: ReportErrorComponent
+      },
+      {
+        path: 'follow',
+        component: FollowUsComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
       },
       {
         path: '',
