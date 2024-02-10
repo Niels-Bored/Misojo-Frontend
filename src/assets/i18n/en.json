@@ -59,6 +59,8 @@
         "PLACEHOLDER_EMAIL": "E.g. john@email.com",
         "PLACEHOLDER_PASSWORD": "At least 8 characters",
         "PLACEHOLDER_CONFIRM_PASSWORD": "Repeat the password",
+        "UPLOADBTN": "Upload",
+        "REMOVEBTN": "Remove",
         "UPDATEBTN": "Update",
         "ACCESIBILITY":{
           "FIRSTNAMEINPUT": "First name input",
@@ -66,7 +68,8 @@
           "EMAILINPUT": "Email input",
           "PASSWORDINPUT": "Password input",
           "CONFIRMPASSWORDINPUT": "Confirm Password input",
-          "LOGINBTN": "Login button",
+          "UPLOADBTN": "Upload profile picture button",
+          "REMOVEBTN": "Remove profile picture button",
           "UPDATEBTN": "UPDATE button"
         }
       },

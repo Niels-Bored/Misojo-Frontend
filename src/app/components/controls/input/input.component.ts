@@ -25,6 +25,7 @@ export class InputComponent implements ControlValueAccessor {
   @Input() ariaLabelContent = '';
   @Input() ariaLabelledBy = '';
   @Input() tabIndexNumber = 0;
+  @Input() isDisabled = false;
   @Input() control: any;
   @Input() submitted: boolean = false;
   @Input() error: boolean = false;

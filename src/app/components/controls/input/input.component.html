@@ -6,6 +6,7 @@
   [attr.aria-label]="ariaLabelContent"
   [attr.aria-labelledby]="ariaLabelledBy"
   [tabindex]="tabIndexNumber"
+  [disabled]="isDisabled"
   (input)="change($event)"
   [ngClass]="{'error-field':error && submitted}"
 />

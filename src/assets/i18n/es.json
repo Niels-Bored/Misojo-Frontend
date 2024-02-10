@@ -59,6 +59,8 @@
         "PLACEHOLDER_EMAIL": "E.j. john@email.com",
         "PLACEHOLDER_PASSWORD": "Al menos 8 caracteres",
         "PLACEHOLDER_CONFIRM_PASSWORD": "Repite la contraseña",
+        "UPLOADBTN": "Subir",
+        "REMOVEBTN": "Remover",
         "UPDATEBTN": "Actualizar",
         "ACCESIBILITY":{
           "FIRSTNAMEINPUT":"Campo de texto nombre",
@@ -66,6 +68,8 @@
           "EMAILINPUT": "Campo de texto correo",
           "PASSWORDINPUT": "Campo de texto contraseña",
           "CONFIRMPASSWORDINPUT": "Campo de texto confirmar contraseña",
+          "UPLOADBTN": "Botón subir foto de perfil",
+          "REMOVEBTN": "Botón remove foto de perfil",
           "UPDATEBTN": "Botón actualizar"
         }
       },

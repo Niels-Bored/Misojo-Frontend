@@ -83,12 +83,56 @@ a:hover {
 
 form{
   position: relative;
-  width: 60%;
+  width: 80%;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+
+  .form-section{
+    display: flex;
+    gap: 20px;
+    .left-form{
+      width: 70%;
+    }
+    .right-form{
+      width: 30%;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        width: 200px;
+        border: 2px solid @light-grey;
+        border-bottom: none;
+        border-radius: 20px 20px 0 0;
+        background-color: @tertiary-color;
+      }
+      .button-row{
+        display: flex;
+        button{
+          font-family: @text-font;
+          width: 100px;
+          height: 30px;
+          /* border: none; */
+          border: 2px solid @light-grey;
+          cursor: pointer;
+        }
+        .left-button{
+          color: @white-color;
+          border-right: none;
+          border-radius: 0 0 0 20px;
+          background-color: @primary-color;
+        }
+        .right-button{
+          /* border-left: none; */
+          border-radius: 0 0 20px 0;
+          background-color: @white-color;
+        }
+      }
+    }
+  }
 }
 
 .spinner{
