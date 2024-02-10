@@ -38,6 +38,9 @@ export class HomeComponent implements OnInit{
     if(type == "email"){
       stringLenght = 16;
     }
+    if(value.length <=stringLenght){
+      return value
+    }
     return value.substring(0, stringLenght)+"...";
   }
 }
