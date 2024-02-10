@@ -5,10 +5,8 @@ import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import { SpinnerService } from 'src/app/services/spinner.service';
-import {TranslateService} from '@ngx-translate/core';
 import { SweetAlertService } from '../../../services/sweet-alert.service';
 import { TranslateMessagesService } from '../../../services/translate-messages.service';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sign-up',
@@ -39,10 +37,8 @@ export class SignUpComponent implements OnInit {
     private router: Router,
     private misojoApi: MisojoApiService,
     private spinnerService: SpinnerService,
-    private translateService: TranslateService,
     private translateMessage: TranslateMessagesService,
     private sweetAlert: SweetAlertService,
-    private titleService: Title,
     @Inject(PLATFORM_ID) private platformID: any
     ) { }
 

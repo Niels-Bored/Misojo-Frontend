@@ -29,13 +29,47 @@
   },
   "HOME":{
     "MENU":{
-      "MY_FILES":"My Files",
-      "PUBLIC_FILES":"Public Files",
-      "RECOMENDATIONS":"Recomendations",
-      "UPLOAD":"Upload file",
-      "REPORT":"Report an error",
-      "FOLLOW":"Follow us",
-      "SETTINGS":"Settings",
+      "MY_FILES":{
+        "NAME":"My Files"
+      },
+      "PUBLIC_FILES":{
+        "NAME":"Public Files"
+      },
+      "RECOMENDATIONS":{
+        "NAME":"Recomendations"
+      },
+      "UPLOAD":{
+        "NAME":"Upload file"
+      },
+      "REPORT":{
+        "NAME":"Report an error"
+      },
+      "FOLLOW":{
+        "NAME":"Follow us"
+      },
+      "SETTINGS":{
+        "NAME":"Settings",
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Last Name",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "CONFIRM_PASSWORD": "Confirm Password",
+        "PLACEHOLDER_FIRST_NAME": "E.g. John",
+        "PLACEHOLDER_LAST_NAME": "E.g. Doe",
+        "PLACEHOLDER_EMAIL": "E.g. john@email.com",
+        "PLACEHOLDER_PASSWORD": "At least 8 characters",
+        "PLACEHOLDER_CONFIRM_PASSWORD": "Repeat the password",
+        "UPDATEBTN": "Update",
+        "ACCESIBILITY":{
+          "FIRSTNAMEINPUT": "First name input",
+          "LASTNAMEINPUT": "Last name input",
+          "EMAILINPUT": "Email input",
+          "PASSWORDINPUT": "Password input",
+          "CONFIRMPASSWORDINPUT": "Confirm Password input",
+          "LOGINBTN": "Login button",
+          "UPDATEBTN": "UPDATE button"
+        }
+      },
       "LOGOUT":"Log out"
     }
   },

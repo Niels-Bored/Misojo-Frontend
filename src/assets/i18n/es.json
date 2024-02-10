@@ -29,13 +29,46 @@
   },
   "HOME":{
     "MENU":{
-      "MY_FILES":"Mis archivos",
-      "PUBLIC_FILES":"Archivos Públicos",
-      "RECOMENDATIONS":"Recomendaciones",
-      "UPLOAD":"Sube un archivo",
-      "REPORT":"Reporta un error",
-      "FOLLOW":"Redes Sociales",
-      "SETTINGS":"Configuraciones",
+      "MY_FILES":{
+        "NAME":"Mis archivos"
+      },
+      "PUBLIC_FILES":{
+        "NAME":"Archivos Públicos"
+      },
+      "RECOMENDATIONS":{
+        "NAME":"Recomendaciones"
+      },
+      "UPLOAD":{
+        "NAME":"Sube un archivo"
+      },
+      "REPORT":{
+        "NAME":"Reporta un error"
+      },
+      "FOLLOW":{
+        "NAME":"Redes Sociales"
+      },
+      "SETTINGS":{
+        "NAME":"Configuraciones",
+        "FIRST_NAME": "Nombre",
+        "LAST_NAME": "Apellido(s)",
+        "EMAIL": "Correo",
+        "PASSWORD": "Contraseña",
+        "CONFIRM_PASSWORD": "Confirmar Contraseña",
+        "PLACEHOLDER_FIRST_NAME": "E.j. John",
+        "PLACEHOLDER_LAST_NAME": "E.j. Doe",
+        "PLACEHOLDER_EMAIL": "E.j. john@email.com",
+        "PLACEHOLDER_PASSWORD": "Al menos 8 caracteres",
+        "PLACEHOLDER_CONFIRM_PASSWORD": "Repite la contraseña",
+        "UPDATEBTN": "Actualizar",
+        "ACCESIBILITY":{
+          "FIRSTNAMEINPUT":"Campo de texto nombre",
+          "LASTNAMEINPUT":"Campo de texto apellidos",
+          "EMAILINPUT": "Campo de texto correo",
+          "PASSWORDINPUT": "Campo de texto contraseña",
+          "CONFIRMPASSWORDINPUT": "Campo de texto confirmar contraseña",
+          "UPDATEBTN": "Botón actualizar"
+        }
+      },
       "LOGOUT":"Cerrar Sesión"
     }
   },
