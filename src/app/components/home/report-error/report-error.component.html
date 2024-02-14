@@ -1,1 +1,42 @@
-<p>report-error works!</p>
+<div class="content">
+  <form [formGroup]="errorForm" (ngSubmit)="submit()" novalidate>
+    <div class="spinner" *ngIf="showSpinner">
+      <app-spinner></app-spinner>
+    </div>
+
+    <h1 attr.aria-label="{{ 'HOME.MENU.REPORT.NAME' | translate }}" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">{{ 'HOME.MENU.REPORT.NAME' | translate }}</h1>
+
+    <div class="inputs" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1200">
+      <app-label
+        text="{{ 'HOME.MENU.REPORT.ERROR' | translate }}"
+      >
+      </app-label>
+      <app-text-area
+        name="error"
+        type="text"
+        formControlName="error"
+        [placeHolderText]="'HOME.MENU.REPORT.PLACEHOLDER_ERROR' | translate"
+        [ariaLabelContent]="'AUTH.ACCESIBILITY.EMAILINPUT' | translate"
+        [ariaLabelledBy]="'required-message-error'"
+        [rows]="'15'"
+        [control]="errorForm.controls['error']"
+        [submitted]="submitted"
+        [error]="this.errorForm.get('error')!.hasError('required') || this.errorForm.get('error')!.hasError('error')"
+      >
+      </app-text-area>
+      <p id="required-message-error" *ngIf="this.errorForm.get('error')!.hasError('required') && submitted" class="error-field">{{'INPUT_ERRORS.REQUIRED_EMAIL' | translate}}</p>
+    </div>
+
+    <div class="centered" data-aos="fade-down" data-aos-duration="800" data-aos-delay="1600">
+      <div class="row">
+        <div class="button-comtainer">
+          <app-button
+            text="{{ 'HOME.MENU.REPORT.REPORTBTN' | translate }}"
+            [ariaLabelContent]="'HOME.MENU.REPORT.ACCESIBILITY.REMOVEBTN' | translate"
+          >
+          </app-button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

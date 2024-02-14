@@ -8,6 +8,7 @@ import { SignUpComponent } from './components/authentication/sign-up/sign-up.com
 import { LabelComponent } from './components/controls/label/label.component';
 import { ButtonComponent } from './components/controls/button/button.component';
 import { InputComponent } from './components/controls/input/input.component';
+import { TextAreaComponent } from './components/controls/text-area/text-area.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { SpinnerComponent } from './components/controls/spinner/spinner.component';
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LabelComponent,
     ButtonComponent,
     InputComponent,
+    TextAreaComponent,
     SpinnerComponent,
     NavbarComponent,
     LanguageSelectorComponent

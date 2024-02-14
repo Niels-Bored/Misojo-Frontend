@@ -42,10 +42,17 @@
         "NAME":"Sube un archivo"
       },
       "REPORT":{
-        "NAME":"Reporta un error"
+        "NAME":"Reporta un error",
+        "ERROR":"Descripción del error",
+        "PLACEHOLDER_ERROR": "Describe el error",
+        "REPORTBTN": "Reportar",
+        "ACCESIBILITY":{
+          "ERRORINPUT": "Campo descripción del error",
+          "UPDATEBTN": "Botón reportar"
+        }
       },
-      "FOLLOW":{
-        "NAME":"Redes Sociales"
+      "ABOUT":{
+        "NAME":"Acerca de"
       },
       "SETTINGS":{
         "NAME":"Configuraciones",
@@ -103,7 +110,9 @@
   },
   "TITLE": {
     "SIGNUP":"Registro",
-    "LOGIN":"Inicio de Sesión"
+    "LOGIN":"Inicio de Sesión",
+    "ERRORREPORT":"Reporte de errores",
+    "SETTINGS":"Configuración"
   },
   "API": {
     "REGISTER":{

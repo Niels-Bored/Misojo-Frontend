@@ -42,10 +42,17 @@
         "NAME":"Upload file"
       },
       "REPORT":{
-        "NAME":"Report an error"
+        "NAME":"Bug report",
+        "ERROR":"Error description",
+        "PLACEHOLDER_ERROR": "Describe the error",
+        "REPORTBTN": "Report",
+        "ACCESIBILITY":{
+          "ERRORINPUT": "Error description input",
+          "UPDATEBTN": "Report button"
+        }
       },
-      "FOLLOW":{
-        "NAME":"Follow us"
+      "ABOUT":{
+        "NAME":"About us"
       },
       "SETTINGS":{
         "NAME":"Settings",
@@ -104,7 +111,9 @@
   },
   "TITLE": {
     "SIGNUP":"Sign Up",
-    "LOGIN":"Login"
+    "LOGIN":"Login",
+    "ERRORREPORT":"Bug Report",
+    "SETTINGS":"Settings"
   },
   "API":{
     "REGISTER":{

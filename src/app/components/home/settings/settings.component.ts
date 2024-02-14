@@ -31,31 +31,31 @@ export class SettingsComponent {
     @Inject(PLATFORM_ID) private platformID: any
     ) { }
 
-    ngOnInit(): void {
-      this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
-        this.showSpinner=value;
-      })
+  ngOnInit(): void {
+    this.spinnerService.getShowSpinnerObservable().subscribe(value=>{
+      this.showSpinner=value;
+    })
 
-      this.translateMessage.setTitle("SIGNUP");
+    this.translateMessage.setTitle("SETTINGS");
 
-      let subscription = this.translateMessage.language$.subscribe((language) => {
-        this.language = language;
-        this.translateMessage.setTitle("SIGNUP");
+    let subscription = this.translateMessage.language$.subscribe((language) => {
+      this.language = language;
+      this.translateMessage.setTitle("SETTINGS");
 
-      });
+    });
 
-      if(isPlatformBrowser(this.platformID)){
-        // Disable aos wait if screen is small
-        if (window.innerHeight < 600) {
-          document.querySelectorAll('[data-aos]')?.forEach((elem) =>
-            elem.setAttribute('data-aos-delay', '0')
-          )
-        }
+    if(isPlatformBrowser(this.platformID)){
+      // Disable aos wait if screen is small
+      if (window.innerHeight < 600) {
+        document.querySelectorAll('[data-aos]')?.forEach((elem) =>
+          elem.setAttribute('data-aos-delay', '0')
+        )
       }
     }
+  }
 
 
-  signUpForm: FormGroup = new FormGroup(
+  updateForm: FormGroup = new FormGroup(
     {
       name: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
@@ -87,7 +87,7 @@ export class SettingsComponent {
   * Called when user submit the form
   */
   submit() {
-    if(this.signUpForm.invalid){
+    if(this.updateForm.invalid){
       this.invalidMessage = this.translateMessage.getMessage("ALERT_MESSAGES.CHECK_FIELDS")
       this.sweetAlert.alert("Error", this.invalidMessage, "error")
       this.submitted = true;
