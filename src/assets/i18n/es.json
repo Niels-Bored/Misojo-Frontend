@@ -53,7 +53,9 @@
         }
       },
       "ABOUT":{
-        "NAME":"Acerca de"
+        "NAME":"Acerca de",
+        "TITLE": "Acerca de Misojo",
+        "DESCRIPTION":"Misojo se trata de un software orientado al acceso a documentos en formato pdf por medio de la narración por voz o text to speech, esto a partir de una interfaz creada con base a principios de accesibilidad pensados para usuarios que presenten algún grado de discapacidad visual."
       },
       "SETTINGS":{
         "NAME":"Configuraciones",
