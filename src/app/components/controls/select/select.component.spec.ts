@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FollowUsComponent } from './follow-us.component';
+import { SelectComponent } from './select.component';
 
-describe('FollowUsComponent', () => {
-  let component: FollowUsComponent;
-  let fixture: ComponentFixture<FollowUsComponent>;
+describe('SelectComponent', () => {
+  let component: SelectComponent;
+  let fixture: ComponentFixture<SelectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FollowUsComponent]
+      imports: [SelectComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FollowUsComponent);
+    fixture = TestBed.createComponent(SelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,26 @@
+@import "../../../../common-variables.less";
+
+select {
+  width: 100%;
+  padding: 6px 15px;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: @secondary-color;
+  border: 2px solid fade(@tertiary-color, 10%);
+  border-radius: 7px;
+  box-sizing: border-box;
+  transition-duration: @transition-duration;
+
+  &:focus{
+    outline: none;
+  }
+
+  &::placeholder{
+    font-family: 'Noto Sans', sans-serif;
+    color: fade(@tertiary-color, 30%);
+  }
+
+  &:focus{
+    outline: none;
+    border: 2px solid fade(@tertiary-color, 60%);
+  }
+}

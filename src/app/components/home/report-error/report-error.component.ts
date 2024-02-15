@@ -20,6 +20,8 @@ export class ReportErrorComponent {
   public successMessage = "";
   public invalidMessage = "";
   public language = ""
+  public sections: string[] = ['TITLE.SIGNUP', 'TITLE.LOGIN', 'TITLE.ERRORREPORT', 'TITLE.SETTINGS'];
+  optionSelected: string = '';
 
   constructor(
     private router: Router,
@@ -37,10 +39,9 @@ export class ReportErrorComponent {
 
     this.translateMessage.setTitle("ERRORREPORT");
 
-    let subscription = this.translateMessage.language$.subscribe((language) => {
+    this.translateMessage.language$.subscribe((language) => {
       this.language = language;
       this.translateMessage.setTitle("ERRORREPORT");
-
     });
 
     if(isPlatformBrowser(this.platformID)){
@@ -58,6 +59,15 @@ export class ReportErrorComponent {
       error: new FormControl('', Validators.required)
     }
   );
+
+  /**
+  * Detects a change on select component
+  * @constructor
+  * @param {any} option - Option value selected from component
+  */
+  onOptionSelectedChange(option: any): void {
+    this.optionSelected = option;
+  }
 
   /**
   * Called when user submit the form

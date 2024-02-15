@@ -8,7 +8,7 @@ import { PublicLibraryComponent } from './components/home/public-library/public-
 import { RecomendationsComponent } from './components/home/recomendations/recomendations.component';
 import { UploadFileComponent } from './components/home/upload-file/upload-file.component';
 import { ReportErrorComponent } from './components/home/report-error/report-error.component';
-import { FollowUsComponent } from './components/home/follow-us/follow-us.component';
+import { AboutUsComponent } from './components/home/about-us/about-us.component';
 import { SettingsComponent } from './components/home/settings/settings.component';
 
 const routes: Routes = [
@@ -52,7 +52,7 @@ const routes: Routes = [
       },
       {
         path: 'follow',
-        component: FollowUsComponent
+        component: AboutUsComponent
       },
       {
         path: 'settings',

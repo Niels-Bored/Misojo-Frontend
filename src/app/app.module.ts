@@ -9,6 +9,7 @@ import { LabelComponent } from './components/controls/label/label.component';
 import { ButtonComponent } from './components/controls/button/button.component';
 import { InputComponent } from './components/controls/input/input.component';
 import { TextAreaComponent } from './components/controls/text-area/text-area.component';
+import { SelectComponent } from './components/controls/select/select.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { SpinnerComponent } from './components/controls/spinner/spinner.component';
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
@@ -21,7 +22,7 @@ import { PublicLibraryComponent } from './components/home/public-library/public-
 import { RecomendationsComponent } from './components/home/recomendations/recomendations.component';
 import { UploadFileComponent } from './components/home/upload-file/upload-file.component';
 import { ReportErrorComponent } from './components/home/report-error/report-error.component';
-import { FollowUsComponent } from './components/home/follow-us/follow-us.component';
+import { AboutUsComponent } from './components/home/about-us/about-us.component';
 import { SettingsComponent } from './components/home/settings/settings.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -39,12 +40,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     RecomendationsComponent,
     UploadFileComponent,
     ReportErrorComponent,
-    FollowUsComponent,
+    AboutUsComponent,
     SettingsComponent,
     LabelComponent,
     ButtonComponent,
     InputComponent,
     TextAreaComponent,
+    SelectComponent,
     SpinnerComponent,
     NavbarComponent,
     LanguageSelectorComponent
