@@ -28,6 +28,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Disable use of localstorage if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       //Set deafult languge on localstorage value
       let language = localStorage.getItem("lang")
@@ -60,6 +61,7 @@ export class NavbarComponent implements OnInit {
   * @param {string} language - Language selected as a string
   */
   changeLanguage(language:string){
+    //Disable use of localstorage if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       //Save on localstorage language configuration
       localStorage.setItem("lang", language.toLowerCase());

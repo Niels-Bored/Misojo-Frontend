@@ -20,7 +20,7 @@ export class ReportErrorComponent {
   public successMessage = "";
   public invalidMessage = "";
   public language = ""
-  public sections: string[] = ['TITLE.SIGNUP', 'TITLE.LOGIN', 'TITLE.ERRORREPORT', 'TITLE.SETTINGS'];
+  public sections: string[] = ['TITLE.SIGNUP', 'TITLE.LOGIN', 'TITLE.ERRORREPORT', 'TITLE.ABOUT', 'TITLE.SETTINGS'];
   optionSelected: string = '';
 
   constructor(
@@ -44,6 +44,7 @@ export class ReportErrorComponent {
       this.translateMessage.setTitle("ERRORREPORT");
     });
 
+    //Disable use of document if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       // Disable aos wait if screen is small
       if (window.innerHeight < 600) {

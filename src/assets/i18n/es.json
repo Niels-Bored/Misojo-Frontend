@@ -115,6 +115,7 @@
     "SIGNUP":"Registro",
     "LOGIN":"Inicio de Sesión",
     "ERRORREPORT":"Reporte de errores",
+    "ABOUT": "Acerca de",
     "SETTINGS":"Configuración"
   },
   "API": {

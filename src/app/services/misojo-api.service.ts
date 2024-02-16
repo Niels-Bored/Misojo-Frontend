@@ -10,7 +10,7 @@ import { catchError, tap } from "rxjs/operators";
 import { ISignUpRequest } from '../models/sign-up-request.model';
 import { ILoginRequest } from '../models/login-request';
 import { IAuthenticationResponse } from '../models/authentication-response';
-
+import { SessionServiceService } from './session-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,7 @@ export class MisojoApiService {
 
   constructor(
     private httpClient: HttpClient,
+    private sessionService: SessionServiceService,
     @Inject(PLATFORM_ID) private platformID: any
   ) { }
 
@@ -56,9 +57,9 @@ export class MisojoApiService {
       )
       .pipe(
         tap((response) => {
+          //Disable use of localstorage if page is not load on browser
           if(isPlatformBrowser(this.platformID)){
-            localStorage.setItem("refresh",response.data.refresh);
-            localStorage.setItem("access",response.data.access);
+            this.sessionService.setSessionKeys(response.data.refresh, response.data.access)
           }
         }),
         catchError((error) => this.handleError(error))

@@ -19,6 +19,7 @@ export class LanguageSelectorComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //Disable use of localstorage if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       let language = localStorage.getItem("lang")
       if(language){

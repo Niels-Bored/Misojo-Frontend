@@ -116,6 +116,7 @@
     "SIGNUP":"Sign Up",
     "LOGIN":"Login",
     "ERRORREPORT":"Bug Report",
+    "ABOUT": "About us",
     "SETTINGS":"Settings"
   },
   "API":{

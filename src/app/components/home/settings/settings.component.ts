@@ -43,7 +43,7 @@ export class SettingsComponent {
       this.translateMessage.setTitle("SETTINGS");
 
     });
-
+    //Disable use of document if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       // Disable aos wait if screen is small
       if (window.innerHeight < 600) {

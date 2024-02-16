@@ -16,6 +16,7 @@ export class AppComponent {
   ) {
   }
   ngOnInit(): void {
+    //Disable use of localstorage if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       AOS.init();
       let language = localStorage.getItem("lang")
