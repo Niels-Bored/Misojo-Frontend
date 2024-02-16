@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionServiceService } from 'src/app/services/session-service.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit{
   currentRoute: string = "";
 
   constructor(
-    private router:Router
+    private router:Router,
+    private sessionService:SessionServiceService
   ){
   }
 
@@ -42,5 +44,10 @@ export class HomeComponent implements OnInit{
       return value
     }
     return value.substring(0, stringLenght)+"...";
+  }
+
+  logout(){
+    this.sessionService.clearSessionKeys();
+    this.router.navigate(["/login"])
   }
 }
