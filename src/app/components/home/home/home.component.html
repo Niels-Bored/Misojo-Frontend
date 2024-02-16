@@ -12,29 +12,29 @@
       </svg>
       <!-- File options -->
       <div class="file-options">
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/mylibrary')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('mylibrary')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.657 0-3 1.343-3 3v18c0 1.657 1.343 3 3 3h17v-20h-16.505c-1.375 0-1.375-2 0-2zm.505 4h14v16h-14v-16z"/></svg>
-          <button routerLink="/home/mylibrary">{{ 'HOME.MENU.MY_FILES.NAME' | translate }}</button>
+          <button (click)="redirectTo('mylibrary')">{{ 'HOME.MENU.MY_FILES.NAME' | translate }}</button>
         </div>
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/public')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('public')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
-          <button routerLink="/home/public">{{ 'HOME.MENU.PUBLIC_FILES.NAME' | translate }}</button>
+          <button (click)="redirectTo('public')">{{ 'HOME.MENU.PUBLIC_FILES.NAME' | translate }}</button>
         </div>
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/recomendations')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('recomendations')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
-          <button routerLink="/home/recomendations">{{ 'HOME.MENU.RECOMENDATIONS.NAME' | translate }}</button>
+          <button (click)="redirectTo('recomendations')">{{ 'HOME.MENU.RECOMENDATIONS.NAME' | translate }}</button>
         </div>
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/upload')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('upload')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
-          <button routerLink="/home/upload">{{ 'HOME.MENU.UPLOAD.NAME' | translate }}</button>
+          <button (click)="redirectTo('upload')">{{ 'HOME.MENU.UPLOAD.NAME' | translate }}</button>
         </div>
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/report')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('report')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
-          <button routerLink="/home/report">{{ 'HOME.MENU.REPORT.NAME' | translate }}</button>
+          <button (click)="redirectTo('report')">{{ 'HOME.MENU.REPORT.NAME' | translate }}</button>
         </div>
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/follow')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('about')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
-          <button routerLink="/home/follow">{{ 'HOME.MENU.ABOUT.NAME' | translate }}</button>
+          <button (click)="redirectTo('about')">{{ 'HOME.MENU.ABOUT.NAME' | translate }}</button>
         </div>
       </div>
     </section>
@@ -42,7 +42,7 @@
     <section class="bottom-section">
       <!-- User options -->
       <div class="user-options">
-        <div class="menu-option" [ngClass]="{'active-route': activateOption('/home/settings')}">
+        <div class="menu-option" [ngClass]="{'active-route': activateOption('settings')}">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.495 2h16.505v-2h-17c-1.656 0-3 1.343-3 3v18c0 1.657 1.344 3 3 3h17v-20h-16.505c-1.376 0-1.376-2 0-2zm.505 4h7v7l2-2 2 2v-7h3v16h-14v-16z"/></svg>
           <button routerLink="/home/settings">{{ 'HOME.MENU.SETTINGS.NAME' | translate }}</button>
         </div>
@@ -70,4 +70,4 @@
     </div> -->
   </aside>
 </section>
-
+<div #myElement [tabIndex]="dynamicTabIndex" attr.aria-label="{{ 'NAVBAR.CONTENT' | translate }}"></div>

@@ -3,11 +3,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { TranslateMessagesService } from '../../../services/translate-messages.service';
 
 @Component({
-  selector: 'app-follow-us',
+  selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.less'
 })
-export class AboutUsComponent {
+export class AboutUsComponent implements OnInit {
+
   constructor(
     private translateMessage: TranslateMessagesService,
     @Inject(PLATFORM_ID) private platformID: any
