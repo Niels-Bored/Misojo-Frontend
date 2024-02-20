@@ -62,6 +62,7 @@ export class HomeComponent implements OnInit{
   * @param {string} route - String value
   */
   redirectTo(route:string){
+    //location.reload()
     this.router.navigate(["/home/"+route]);
     this.redirecToMainContent()
   }
@@ -74,6 +75,7 @@ export class HomeComponent implements OnInit{
     this.dynamicTabIndex = '0'
     //Set focus at the end of tab index
     this.renderer.selectRootElement(this.myElement!.nativeElement).focus();
+
   }
 
   /**

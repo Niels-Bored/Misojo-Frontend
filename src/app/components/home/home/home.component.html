@@ -62,6 +62,7 @@
     </section>
   </aside>
   <aside class="page">
+    <div #myElement [tabIndex]="dynamicTabIndex" attr.aria-label="{{ 'NAVBAR.CONTENT' | translate }}"></div>
     <router-outlet></router-outlet>
     <!-- <div class="audio-player">
       <audio controls>
@@ -70,4 +71,3 @@
     </div> -->
   </aside>
 </section>
-<div #myElement [tabIndex]="dynamicTabIndex" attr.aria-label="{{ 'NAVBAR.CONTENT' | translate }}"></div>
