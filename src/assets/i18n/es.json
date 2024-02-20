@@ -79,11 +79,12 @@
           "PASSWORDINPUT": "Campo de texto contraseña",
           "CONFIRMPASSWORDINPUT": "Campo de texto confirmar contraseña",
           "UPLOADBTN": "Botón subir foto de perfil",
-          "REMOVEBTN": "Botón remove foto de perfil",
-          "UPDATEBTN": "Botón actualizar"
+          "REMOVEBTN": "Botón eliminar foto de perfil",
+          "UPDATEBTN": "Botón actualizar información"
         }
       },
-      "LOGOUT":"Cerrar Sesión"
+      "LOGOUT":"Cerrar Sesión",
+      "CONTENT": "Presiona tab para ir al contenido principal"
     }
   },
   "INPUT_ERRORS": {

@@ -62,7 +62,6 @@ export class HomeComponent implements OnInit{
   * @param {string} route - String value
   */
   redirectTo(route:string){
-    //location.reload()
     this.router.navigate(["/home/"+route]);
     this.redirecToMainContent()
   }

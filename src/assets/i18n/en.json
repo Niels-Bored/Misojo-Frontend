@@ -83,7 +83,8 @@
           "UPDATEBTN": "UPDATE button"
         }
       },
-      "LOGOUT":"Log out"
+      "LOGOUT":"Log out",
+      "CONTENT": "Press tab to move to main content"
     }
   },
   "INPUT_ERRORS": {

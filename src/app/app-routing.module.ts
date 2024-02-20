@@ -14,7 +14,7 @@ import { SettingsComponent } from './components/home/settings/settings.component
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'signup',
+    redirectTo: 'home/mylibrary',
     pathMatch: 'full'
   },
   {
