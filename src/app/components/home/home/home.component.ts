@@ -35,8 +35,11 @@ export class HomeComponent implements OnInit{
   * Retrieve initial data values
   */
   init(){
-    this.misojoApi.getUserInformation().pipe().subscribe();
-    this.userInformation = this.userService.getUserInformation()
+    this.misojoApi.getUserInformation()
+    .pipe()
+    .subscribe(()=>{
+      this.userInformation = this.userService.getUserInformation()
+    });
   }
 
   /**

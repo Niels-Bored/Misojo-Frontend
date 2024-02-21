@@ -39,4 +39,12 @@ export class SessionServiceService {
     localStorage.removeItem("refresh");
     localStorage.removeItem("access");
   }
+
+  hasValidSession(){
+    let value = false;
+    if(localStorage.getItem("refresh")){
+      value = true;
+    }
+    return value;
+  }
 }

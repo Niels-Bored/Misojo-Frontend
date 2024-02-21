@@ -10,11 +10,12 @@ import { UploadFileComponent } from './components/home/upload-file/upload-file.c
 import { ReportErrorComponent } from './components/home/report-error/report-error.component';
 import { AboutUsComponent } from './components/home/about-us/about-us.component';
 import { SettingsComponent } from './components/home/settings/settings.component';
+import { AuthenticationGuardService } from './services/authentication-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home/mylibrary',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -28,40 +29,47 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    //canActivate: [AdminAuthenticationGuardService],
+    canActivate: [AuthenticationGuardService],
     children: [
       {
         path: 'mylibrary',
-        component: MyLibraryComponent
+        component: MyLibraryComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'public',
-        component: PublicLibraryComponent
+        component: PublicLibraryComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'recomendations',
-        component: RecomendationsComponent
+        component: RecomendationsComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'upload',
-        component: UploadFileComponent
+        component: UploadFileComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'report',
-        component: ReportErrorComponent
+        component: ReportErrorComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'about',
-        component: AboutUsComponent
+        component: AboutUsComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: 'settings',
-        component: SettingsComponent
+        component: SettingsComponent,
+        canActivate: [AuthenticationGuardService],
       },
       {
         path: '',
         pathMatch: "full",
-        redirectTo:'home/mylibrary'
+        redirectTo:'home/mylibrary',
       }
     ]
   },
