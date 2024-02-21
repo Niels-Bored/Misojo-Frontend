@@ -58,8 +58,8 @@
       <div class="user-information">
         <img src="../../../../assets/Images/sign-up-img.svg">
         <div class="user-text-information">
-          <p class="user-name">{{cutStringValue(userName, 'name')}}</p>
-          <p class="email-text">{{cutStringValue(userEmail, 'email')}}</p>
+          <p class="user-name">{{cutStringValue( concatString(userInformation.first_name, userInformation.last_name) , 'name')}}</p>
+          <p class="email-text">{{cutStringValue(userInformation.email , 'email')}}</p>
         </div>
       </div>
     </section>

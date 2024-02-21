@@ -5,6 +5,8 @@ import { Router } from "@angular/router";
 import { finalize } from 'rxjs/operators';
 import { MisojoApiService } from 'src/app/services/misojo-api.service';
 import { SpinnerService } from 'src/app/services/spinner.service';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 import { SweetAlertService } from '../../../services/sweet-alert.service';
 import { TranslateMessagesService } from '../../../services/translate-messages.service';
 
@@ -15,6 +17,7 @@ import { TranslateMessagesService } from '../../../services/translate-messages.s
 })
 export class SettingsComponent {
 
+  public userInformation!:User
   public submitted = false;
   public showSpinner = false;
   public successTitle = "";
@@ -25,6 +28,7 @@ export class SettingsComponent {
   constructor(
     private router: Router,
     private misojoApi: MisojoApiService,
+    private userService: UserService,
     private spinnerService: SpinnerService,
     private translateMessage: TranslateMessagesService,
     private sweetAlert: SweetAlertService,
@@ -43,6 +47,9 @@ export class SettingsComponent {
       this.translateMessage.setTitle("SETTINGS");
 
     });
+
+    this.setFormInformation()
+
     //Disable use of document if page is not load on browser
     if(isPlatformBrowser(this.platformID)){
       // Disable aos wait if screen is small
@@ -53,7 +60,6 @@ export class SettingsComponent {
       }
     }
   }
-
 
   updateForm: FormGroup = new FormGroup(
     {
@@ -81,6 +87,16 @@ export class SettingsComponent {
 
     passwordConfirm?.setErrors({ mustMatch: true });
     return { invalid: true };
+  }
+
+  /**
+  * Set user values on form
+  */
+  setFormInformation(){
+    this.userInformation = this.userService.getUserInformation()
+    this.updateForm.controls['name'].setValue(this.userInformation.first_name);
+    this.updateForm.controls['lastName'].setValue(this.userInformation.last_name);
+    this.updateForm.controls['email'].setValue(this.userInformation.email);
   }
 
   /**
