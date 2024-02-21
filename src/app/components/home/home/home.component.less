@@ -9,6 +9,25 @@
   box-sizing: border-box;
 }
 
+.menu-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skip-content{
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: @white-color;
+  outline: none;
+  &:focus{
+    margin-top: 0;
+    border-bottom: 2px solid @secondary-color;
+  }
+}
+
 .menu{
   height: 100vh;
   width: auto;
@@ -90,14 +109,13 @@
       background-color: transparent;
       cursor: pointer;
       transition: all @transition-duration ease-out;
-      
+
       &:focus{
         outline: none;
         border-bottom: 2px solid @primary-color;
         transform: scale(1.05);
       }
     }
-
   }
 
   .menu-option:hover{

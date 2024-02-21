@@ -84,6 +84,7 @@
         }
       },
       "LOGOUT":"Log out",
+      "SKIP": "Skip to content",
       "CONTENT": "Press tab to move to main content"
     }
   },
